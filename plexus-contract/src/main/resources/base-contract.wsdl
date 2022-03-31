@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://contractfirst.cxf.plexus.project.mycompany.com"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	targetNamespace="http://contractfirst.cxf.plexus.project.mycompany.com">
+
+  <wsdl:types>
+    <xs:schema targetNamespace="http://contractfirst.cxf.plexus.project.mycompany.com">
+      <xs:element type="xs:string" name="resultCode" />
+      <xs:element name="TestOrder" type="tns:TestOrder"/>
+      <xs:complexType name="TestOrder">
+          <xs:sequence>
+              <xs:element type="xs:string" name="API-URL"/>
+           </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+
+  <!-- Message definitions for input and output -->
+  <wsdl:message name="TestOrder">
+    <wsdl:part name="parameters" element="tns:purchaseOrder" />
+  </wsdl:message>
+  <wsdl:message name="TestResult">
+    <wsdl:part name="resultCode" element="tns:resultCode" />
+  </wsdl:message>
+
+  <!-- Port (interface) definitions -->
+  <wsdl:portType name="TestEndpoint">
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:TestOrder" />
+      <wsdl:output message="tns:TestResult" />
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <!-- Port bindings to transports and encoding - HTTP, document literal encoding is used -->
+  <wsdl:binding name="TestBinding" type="tns:TestEndpoint">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://contractfirst.cxf.plexus.project.mycompany.com/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <!-- Service definition -->
+  <wsdl:service name="TestEndpointService">
+    <wsdl:port name="TestService" binding="tns:TestBinding">
+      <soap:address location="http://localhost:9101/test" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
