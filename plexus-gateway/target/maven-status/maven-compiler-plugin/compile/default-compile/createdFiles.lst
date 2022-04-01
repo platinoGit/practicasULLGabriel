@@ -1,2 +1,2 @@
-GatewayRoutes.class
-DataGetter.class
+com/company/plexus/gateway/utils/GatewayRoutes.class
+com/company/plexus/gateway/utils/DataGetter.class

@@ -12,6 +12,6 @@
                    serviceClass="com.mycompany.project.plexus.cxf.contractfirst.TestEndpoint"/>
                    
   <camelContext xmlns ="http://camel.apache.org/scheme/spring">
-  <packagescan></packagescan>
+  <packageScan>com.company.plexus.entrypoint.utils</packageScan>
   </camelContext>
 </blueprint>

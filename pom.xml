@@ -6,11 +6,10 @@
   <artifactId>plexus-esb</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Fuse Empty Quickstart - Java</name>
+  <name>Parent Project</name>
   <modules>
-  	<module>plexus-entrypoint</module>
-  	<module>plexus-business</module>
-  	<module>plexus-gateway</module>
   	<module>plexus-contract</module>
+  	<module>plexus-entrypoint</module>
+  	<module>plexus-gateway</module>
   </modules>
 </project>
