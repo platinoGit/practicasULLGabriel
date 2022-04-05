@@ -11,5 +11,6 @@
   	<module>plexus-contract</module>
   	<module>plexus-entrypoint</module>
   	<module>plexus-gateway</module>
+  	<module>plexus-interface</module>
   </modules>
 </project>

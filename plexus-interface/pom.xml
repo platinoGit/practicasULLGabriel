@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.mycompany</groupId>
+    <artifactId>plexus-esb</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>plexus-interface</artifactId>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>javax.xml.ws</groupId>
+  		<artifactId>jaxws-api</artifactId>
+  		<version>2.3.1</version>
+  	</dependency>
+  	 <dependency>
+  		<groupId>com.sun.xml.ws</groupId>
+  		<artifactId>jaxws-rt</artifactId>
+  		<version>2.3.5</version>
+  	</dependency>
+  	<dependency>
+        <groupId>org.apache.camel</groupId>
+        <artifactId>camel-cxf</artifactId>
+        <scope>provided</scope>
+        <version>3.15.0</version>
+    </dependency>
+    
+     <dependency>
+       	<groupId>org.apache.camel</groupId>
+       	<artifactId>camel-jaxb</artifactId>
+       	<version>3.15.0</version>
+     </dependency>
+  </dependencies>
+ 
+  
+  <build>
+  	<pluginManagement>
+  		<plugins>
+  		      <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-compiler-plugin</artifactId>
+                  <version>3.7.0</version>
+              </plugin>
+  		</plugins>
+  	</pluginManagement>
+  	<plugins>
+		<plugin>
+	  		<groupId>org.apache.maven.plugins</groupId>
+	  		<artifactId>maven-compiler-plugin</artifactId>
+	  		<configuration>
+	        	<source>1.8</source>
+	        	<target>1.8</target>
+	        </configuration>
+		</plugin>
+		
+		<plugin>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-java2ws-plugin</artifactId>
+        <version>3.4.6</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>3.4.6</version>
+          </dependency>
+          <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-simple</artifactId>
+            <version>3.4.6</version>
+          </dependency>
+
+        </dependencies>
+        <executions>
+          <execution>
+            <id>generate-wsdl</id>
+            <phase>process-classes</phase>
+            <configuration>
+              <className>com.company.plexus.inf.ws.PlexusService</className>
+              <serviceName>queryService</serviceName>
+              <outputFile>${basedir}/../plexus-entrypoint/src/main/resources/META-INF/wsdl/queryService.wsdl</outputFile>
+              <genWsdl>true</genWsdl>
+              <verbose>true</verbose>
+              <attachWsdl>false</attachWsdl>
+              <verbose>true</verbose>
+            </configuration>
+            <goals>
+              <goal>java2ws</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+  	</plugins>
+  </build>
+  
+</project>

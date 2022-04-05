@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="queryService" targetNamespace="http://contractfirst.cxf.plexus.project.mycompany.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://contractfirst.cxf.plexus.project.mycompany.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<xs:schema xmlns:tns="http://contractfirst.cxf.plexus.project.mycompany.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://contractfirst.cxf.plexus.project.mycompany.com" version="1.0">
+
+  <xs:element name="selectService" type="tns:selectService"/>
+
+  <xs:element name="selectServiceResponse" type="tns:selectServiceResponse"/>
+
+  <xs:complexType name="selectService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="serviceID" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="selectServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Service" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="selectService">
+    <wsdl:part name="parameters" element="tns:selectService">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="selectServiceResponse">
+    <wsdl:part name="parameters" element="tns:selectServiceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="query">
+    <wsdl:operation name="selectService">
+      <wsdl:input name="selectService" message="tns:selectService">
+    </wsdl:input>
+      <wsdl:output name="selectServiceResponse" message="tns:selectServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="queryServiceSoapBinding" type="tns:query">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="selectService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="selectService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="selectServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="queryService">
+    <wsdl:port name="queryServicePort" binding="tns:queryServiceSoapBinding">
+      <soap:address location="http://localhost:9090/queryServicePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
