@@ -20,7 +20,7 @@
 
   <!-- Message definitions for input and output -->
   <wsdl:message name="TestOrder">
-    <wsdl:part name="parameters" element="tns:TestOrder" />
+    <wsdl:part name="parameters" element="tns:Testorder" />
   </wsdl:message>
   <wsdl:message name="TestResult">
     <wsdl:part name="resultCode" element="tns:resultCode" />
