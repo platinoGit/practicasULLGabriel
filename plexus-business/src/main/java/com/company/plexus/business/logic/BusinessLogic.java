@@ -72,12 +72,4 @@ public class BusinessLogic implements PlexusService {
 	public ProcedureLogic getProcedure() {
 		return procedure;
 	}
-
-	public void setService(ServiceLogic service) {
-		this.service = service;
-	}
-
-	public void setProcedure(ProcedureLogic procedure) {
-		this.procedure = procedure;
-	}
 }
