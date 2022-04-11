@@ -11,12 +11,11 @@ import com.company.plexus.utils.Service;
 
 import org.apache.camel.Exchange;
 
-public class BusinessLogic implements PlexusService {
+public class BusinessLogic {
 
 	private ServiceLogic service;
 	private ProcedureLogic procedure;
 	
-	@Override
 	public Service selectServiceByAdminUnity(AdminUnity administrativeUnity, Exchange exchange) {
 		return getService().selectServiceByAdminUnity(administrativeUnity, exchange);
 	}

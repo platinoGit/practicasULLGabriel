@@ -12,5 +12,6 @@
   	<module>plexus-entrypoint</module>
   	<module>plexus-gateway</module>
   	<module>plexus-interface</module>
+  	<module>plexus-datastore</module>
   </modules>
 </project>
