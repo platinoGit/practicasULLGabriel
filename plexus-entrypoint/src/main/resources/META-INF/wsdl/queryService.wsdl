@@ -3,42 +3,96 @@
   <wsdl:types>
 <xs:schema xmlns:tns="http://contractfirst.cxf.plexus.project.mycompany.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://contractfirst.cxf.plexus.project.mycompany.com" version="1.0">
 
-  <xs:element name="createAction" type="tns:createAction"/>
+  <xs:element name="createProcedure" type="tns:createProcedure"/>
 
-  <xs:element name="createActionResponse" type="tns:createActionResponse"/>
+  <xs:element name="createProcedureResponse" type="tns:createProcedureResponse"/>
 
-  <xs:element name="deleteAction" type="tns:deleteAction"/>
+  <xs:element name="createService" type="tns:createService"/>
 
-  <xs:element name="deleteActionResponse" type="tns:deleteActionResponse"/>
+  <xs:element name="createServiceResponse" type="tns:createServiceResponse"/>
 
-  <xs:element name="selectActionByAdminLevel" type="tns:selectActionByAdminLevel"/>
+  <xs:element name="deleteProcedure" type="tns:deleteProcedure"/>
 
-  <xs:element name="selectActionByAdminLevelResponse" type="tns:selectActionByAdminLevelResponse"/>
+  <xs:element name="deleteProcedureResponse" type="tns:deleteProcedureResponse"/>
 
-  <xs:element name="selectActionByAdminUnity" type="tns:selectActionByAdminUnity"/>
+  <xs:element name="deleteService" type="tns:deleteService"/>
 
-  <xs:element name="selectActionByAdminUnityResponse" type="tns:selectActionByAdminUnityResponse"/>
+  <xs:element name="deleteServiceResponse" type="tns:deleteServiceResponse"/>
 
-  <xs:element name="selectActionByDeparment" type="tns:selectActionByDeparment"/>
+  <xs:element name="procedure" type="tns:procedure"/>
 
-  <xs:element name="selectActionByDeparmentResponse" type="tns:selectActionByDeparmentResponse"/>
+  <xs:element name="selectProcedureByAdminLevel" type="tns:selectProcedureByAdminLevel"/>
+
+  <xs:element name="selectProcedureByAdminLevelResponse" type="tns:selectProcedureByAdminLevelResponse"/>
+
+  <xs:element name="selectProcedureByAdminUnity" type="tns:selectProcedureByAdminUnity"/>
+
+  <xs:element name="selectProcedureByAdminUnityResponse" type="tns:selectProcedureByAdminUnityResponse"/>
+
+  <xs:element name="selectProcedureByDeparment" type="tns:selectProcedureByDeparment"/>
+
+  <xs:element name="selectProcedureByDeparmentResponse" type="tns:selectProcedureByDeparmentResponse"/>
+
+  <xs:element name="selectServiceByAdminLevel" type="tns:selectServiceByAdminLevel"/>
+
+  <xs:element name="selectServiceByAdminLevelResponse" type="tns:selectServiceByAdminLevelResponse"/>
+
+  <xs:element name="selectServiceByAdminUnity" type="tns:selectServiceByAdminUnity"/>
+
+  <xs:element name="selectServiceByAdminUnityResponse" type="tns:selectServiceByAdminUnityResponse"/>
+
+  <xs:element name="selectServiceByDeparment" type="tns:selectServiceByDeparment"/>
+
+  <xs:element name="selectServiceByDeparmentResponse" type="tns:selectServiceByDeparmentResponse"/>
 
   <xs:element name="service" type="tns:service"/>
 
-  <xs:element name="updateAction" type="tns:updateAction"/>
+  <xs:element name="updateProcedure" type="tns:updateProcedure"/>
 
-  <xs:element name="updateActionResponse" type="tns:updateActionResponse"/>
+  <xs:element name="updateProcedureResponse" type="tns:updateProcedureResponse"/>
 
-  <xs:complexType name="selectActionByAdminUnity">
+  <xs:element name="updateService" type="tns:updateService"/>
+
+  <xs:element name="updateServiceResponse" type="tns:updateServiceResponse"/>
+
+  <xs:complexType name="selectProcedureByAdminUnity">
     <xs:sequence>
-      <xs:element minOccurs="0" name="administrativeUnityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="administrativeUnity" type="tns:adminUnity"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="selectActionByAdminUnityResponse">
+  <xs:complexType name="selectProcedureByAdminUnityResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="selectActionByAdminUnity" type="tns:service"/>
+      <xs:element minOccurs="0" name="selectProcedureByAdminUnity" type="tns:procedure"/>
     </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="procedure">
+    <xs:complexContent>
+      <xs:extension base="tns:service">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+          <xs:element name="code" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="specific_name" type="xs:string"/>
+          <xs:element minOccurs="0" name="department" type="tns:department"/>
+          <xs:element minOccurs="0" name="resp_admin_uni" type="tns:adminUnity"/>
+          <xs:element minOccurs="0" name="route" type="xs:string"/>
+          <xs:element minOccurs="0" name="procedure_type" type="tns:procedureType"/>
+          <xs:element minOccurs="0" name="start_of_procedure" type="tns:procedureStart"/>
+          <xs:element minOccurs="0" name="ambit" type="tns:ambit"/>
+          <xs:element minOccurs="0" name="admin_level" type="tns:adminLevel"/>
+          <xs:element minOccurs="0" name="sia_code" type="xs:string"/>
+          <xs:element minOccurs="0" name="sia_update_date" type="xs:string"/>
+          <xs:element minOccurs="0" name="release_date" type="xs:string"/>
+          <xs:element minOccurs="0" name="last_modification_date" type="xs:string"/>
+          <xs:element minOccurs="0" name="family" type="xs:string"/>
+          <xs:element minOccurs="0" name="start_date" type="xs:string"/>
+          <xs:element minOccurs="0" name="finish_date" type="xs:string"/>
+          <xs:element minOccurs="0" name="remarks" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="service">
@@ -47,219 +101,491 @@
       <xs:element name="code" type="xs:int"/>
       <xs:element minOccurs="0" name="name" type="xs:string"/>
       <xs:element minOccurs="0" name="specific_name" type="xs:string"/>
-      <xs:element minOccurs="0" name="department" type="xs:string"/>
-      <xs:element minOccurs="0" name="resp_admin_uni" type="xs:string"/>
+      <xs:element minOccurs="0" name="department" type="tns:department"/>
+      <xs:element minOccurs="0" name="resp_admin_uni" type="tns:adminUnity"/>
       <xs:element minOccurs="0" name="route" type="xs:string"/>
-      <xs:element minOccurs="0" name="start_of_procedure" type="xs:string"/>
-      <xs:element minOccurs="0" name="ambit" type="xs:string"/>
-      <xs:element minOccurs="0" name="admin_level" type="xs:string"/>
+      <xs:element minOccurs="0" name="start_of_procedure" type="tns:procedureStart"/>
+      <xs:element minOccurs="0" name="ambit" type="tns:ambit"/>
+      <xs:element minOccurs="0" name="admin_level" type="tns:adminLevel"/>
       <xs:element minOccurs="0" name="sia_code" type="xs:string"/>
       <xs:element minOccurs="0" name="sia_update_date" type="xs:string"/>
       <xs:element minOccurs="0" name="release_date" type="xs:string"/>
       <xs:element minOccurs="0" name="last_modification_date" type="xs:string"/>
-      <xs:element minOccurs="0" name="family" type="xs:string"/>
       <xs:element minOccurs="0" name="start_date" type="xs:string"/>
       <xs:element minOccurs="0" name="finish_date" type="xs:string"/>
       <xs:element minOccurs="0" name="remarks" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="selectActionByAdminLevel">
+  <xs:complexType name="selectServiceByAdminLevel">
     <xs:sequence>
       <xs:element minOccurs="0" name="level" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="selectActionByAdminLevelResponse">
+  <xs:complexType name="selectServiceByAdminLevelResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="selectActionByAdminLevel" type="tns:service"/>
+      <xs:element minOccurs="0" name="selectServiceByAdminLevel" type="tns:service"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="deleteAction">
+  <xs:complexType name="deleteService">
     <xs:sequence>
-      <xs:element minOccurs="0" name="actionId" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceId" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="deleteActionResponse">
+  <xs:complexType name="deleteServiceResponse">
     <xs:sequence/>
   </xs:complexType>
 
-  <xs:complexType name="updateAction">
+  <xs:complexType name="selectProcedureByAdminLevel">
     <xs:sequence>
-      <xs:element minOccurs="0" name="actionId" type="xs:string"/>
-      <xs:element minOccurs="0" name="newAction" type="tns:service"/>
+      <xs:element minOccurs="0" name="level" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="updateActionResponse">
+  <xs:complexType name="selectProcedureByAdminLevelResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="selectProcedureByAdminLevel" type="tns:procedure"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateProcedure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="procedureId" type="xs:string"/>
+      <xs:element minOccurs="0" name="newProcedure" type="tns:procedure"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateProcedureResponse">
     <xs:sequence/>
   </xs:complexType>
 
-  <xs:complexType name="selectActionByDeparment">
+  <xs:complexType name="selectProcedureByDeparment">
     <xs:sequence>
-      <xs:element minOccurs="0" name="departmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="department" type="tns:department"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="selectActionByDeparmentResponse">
+  <xs:complexType name="selectProcedureByDeparmentResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="selectActionByDeparment" type="tns:service"/>
+      <xs:element minOccurs="0" name="selectProcedureByDeparment" type="tns:procedure"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="createAction">
+  <xs:complexType name="selectServiceByAdminUnity">
     <xs:sequence>
-      <xs:element minOccurs="0" name="action" type="tns:service"/>
+      <xs:element minOccurs="0" name="administrativeUnity" type="tns:adminUnity"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="createActionResponse">
+  <xs:complexType name="selectServiceByAdminUnityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="selectServiceByAdminUnity" type="tns:service"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteProcedure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProcedureId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteProcedureResponse">
     <xs:sequence/>
   </xs:complexType>
+
+  <xs:complexType name="selectServiceByDeparment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="department" type="tns:department"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="selectServiceByDeparmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="selectServiceByDeparment" type="tns:service"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createProcedure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="procedure" type="tns:procedure"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createProcedureResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="createService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="service" type="tns:service"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createServiceResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="updateService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="serviceId" type="xs:string"/>
+      <xs:element minOccurs="0" name="newService" type="tns:service"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateServiceResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:simpleType name="adminUnity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CONSEJERIA_EDUCACION"/>
+      <xs:enumeration value="CONSEJERIA_AGRICULTURA"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="department">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INDUSTRIA"/>
+      <xs:enumeration value="GENERAL"/>
+      <xs:enumeration value="PESCA"/>
+      <xs:enumeration value="TURISTICA"/>
+      <xs:enumeration value="EDUCATIVA"/>
+      <xs:enumeration value="TRABAJO"/>
+      <xs:enumeration value="EMPLEO"/>
+      <xs:enumeration value="SALUD"/>
+      <xs:enumeration value="AGENCIA_TRIBUTARIA"/>
+      <xs:enumeration value="TESORO"/>
+      <xs:enumeration value="TRANSPORTE"/>
+      <xs:enumeration value="AGRICULTURA"/>
+      <xs:enumeration value="ENERGIA"/>
+      <xs:enumeration value="INMIGRACION"/>
+      <xs:enumeration value="GANADERIA"/>
+      <xs:enumeration value="EMIGRACION"/>
+      <xs:enumeration value="TECNICA"/>
+      <xs:enumeration value="ADMIN_PUBLIC"/>
+      <xs:enumeration value="PROMOCION"/>
+      <xs:enumeration value="PATRIMONIO"/>
+      <xs:enumeration value="CULTURAL"/>
+      <xs:enumeration value="AGROALIMENTARIA"/>
+      <xs:enumeration value="INFANCIA"/>
+      <xs:enumeration value="JUVENTUD"/>
+      <xs:enumeration value="COMERCIO"/>
+      <xs:enumeration value="VIVIENDA"/>
+      <xs:enumeration value="MEDIO_AMBIENTE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="procedureType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OTRO_PROCEDIMIENTO"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="procedureStart">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INTERESADO"/>
+      <xs:enumeration value="OFICIO"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ambit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="COMUN"/>
+      <xs:enumeration value="ESPECIFICO"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="adminLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NIVEL_1"/>
+      <xs:enumeration value="NIVEL_2"/>
+      <xs:enumeration value="NIVEL_3"/>
+      <xs:enumeration value="NIVEL_4"/>
+    </xs:restriction>
+  </xs:simpleType>
 
 </xs:schema>
   </wsdl:types>
-  <wsdl:message name="selectActionByAdminUnity">
-    <wsdl:part name="parameters" element="tns:selectActionByAdminUnity">
+  <wsdl:message name="selectProcedureByAdminUnity">
+    <wsdl:part name="parameters" element="tns:selectProcedureByAdminUnity">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="selectActionByAdminLevel">
-    <wsdl:part name="parameters" element="tns:selectActionByAdminLevel">
+  <wsdl:message name="selectProcedureByAdminLevelResponse">
+    <wsdl:part name="parameters" element="tns:selectProcedureByAdminLevelResponse">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="selectActionByDeparmentResponse">
-    <wsdl:part name="parameters" element="tns:selectActionByDeparmentResponse">
+  <wsdl:message name="selectServiceByAdminLevelResponse">
+    <wsdl:part name="parameters" element="tns:selectServiceByAdminLevelResponse">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="deleteAction">
-    <wsdl:part name="parameters" element="tns:deleteAction">
+  <wsdl:message name="selectServiceByAdminLevel">
+    <wsdl:part name="parameters" element="tns:selectServiceByAdminLevel">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="updateActionResponse">
-    <wsdl:part name="parameters" element="tns:updateActionResponse">
+  <wsdl:message name="selectServiceByDeparmentResponse">
+    <wsdl:part name="parameters" element="tns:selectServiceByDeparmentResponse">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="selectActionByAdminLevelResponse">
-    <wsdl:part name="parameters" element="tns:selectActionByAdminLevelResponse">
+  <wsdl:message name="deleteService">
+    <wsdl:part name="parameters" element="tns:deleteService">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="deleteActionResponse">
-    <wsdl:part name="parameters" element="tns:deleteActionResponse">
+  <wsdl:message name="selectProcedureByAdminUnityResponse">
+    <wsdl:part name="parameters" element="tns:selectProcedureByAdminUnityResponse">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="updateAction">
-    <wsdl:part name="parameters" element="tns:updateAction">
+  <wsdl:message name="createProcedureResponse">
+    <wsdl:part name="parameters" element="tns:createProcedureResponse">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="createActionResponse">
-    <wsdl:part name="parameters" element="tns:createActionResponse">
+  <wsdl:message name="deleteServiceResponse">
+    <wsdl:part name="parameters" element="tns:deleteServiceResponse">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="selectActionByAdminUnityResponse">
-    <wsdl:part name="parameters" element="tns:selectActionByAdminUnityResponse">
+  <wsdl:message name="selectProcedureByAdminLevel">
+    <wsdl:part name="parameters" element="tns:selectProcedureByAdminLevel">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="selectActionByDeparment">
-    <wsdl:part name="parameters" element="tns:selectActionByDeparment">
+  <wsdl:message name="updateProcedure">
+    <wsdl:part name="parameters" element="tns:updateProcedure">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="createAction">
-    <wsdl:part name="parameters" element="tns:createAction">
+  <wsdl:message name="updateServiceResponse">
+    <wsdl:part name="parameters" element="tns:updateServiceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="selectProcedureByDeparment">
+    <wsdl:part name="parameters" element="tns:selectProcedureByDeparment">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createServiceResponse">
+    <wsdl:part name="parameters" element="tns:createServiceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="selectServiceByAdminUnityResponse">
+    <wsdl:part name="parameters" element="tns:selectServiceByAdminUnityResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateProcedureResponse">
+    <wsdl:part name="parameters" element="tns:updateProcedureResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="selectServiceByAdminUnity">
+    <wsdl:part name="parameters" element="tns:selectServiceByAdminUnity">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteProcedure">
+    <wsdl:part name="parameters" element="tns:deleteProcedure">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteProcedureResponse">
+    <wsdl:part name="parameters" element="tns:deleteProcedureResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="selectServiceByDeparment">
+    <wsdl:part name="parameters" element="tns:selectServiceByDeparment">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="selectProcedureByDeparmentResponse">
+    <wsdl:part name="parameters" element="tns:selectProcedureByDeparmentResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createProcedure">
+    <wsdl:part name="parameters" element="tns:createProcedure">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createService">
+    <wsdl:part name="parameters" element="tns:createService">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateService">
+    <wsdl:part name="parameters" element="tns:updateService">
     </wsdl:part>
   </wsdl:message>
   <wsdl:portType name="query">
-    <wsdl:operation name="selectActionByAdminUnity">
-      <wsdl:input name="selectActionByAdminUnity" message="tns:selectActionByAdminUnity">
+    <wsdl:operation name="selectProcedureByAdminUnity">
+      <wsdl:input name="selectProcedureByAdminUnity" message="tns:selectProcedureByAdminUnity">
     </wsdl:input>
-      <wsdl:output name="selectActionByAdminUnityResponse" message="tns:selectActionByAdminUnityResponse">
+      <wsdl:output name="selectProcedureByAdminUnityResponse" message="tns:selectProcedureByAdminUnityResponse">
     </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="selectActionByAdminLevel">
-      <wsdl:input name="selectActionByAdminLevel" message="tns:selectActionByAdminLevel">
+    <wsdl:operation name="selectServiceByAdminLevel">
+      <wsdl:input name="selectServiceByAdminLevel" message="tns:selectServiceByAdminLevel">
     </wsdl:input>
-      <wsdl:output name="selectActionByAdminLevelResponse" message="tns:selectActionByAdminLevelResponse">
+      <wsdl:output name="selectServiceByAdminLevelResponse" message="tns:selectServiceByAdminLevelResponse">
     </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="deleteAction">
-      <wsdl:input name="deleteAction" message="tns:deleteAction">
+    <wsdl:operation name="deleteService">
+      <wsdl:input name="deleteService" message="tns:deleteService">
     </wsdl:input>
-      <wsdl:output name="deleteActionResponse" message="tns:deleteActionResponse">
+      <wsdl:output name="deleteServiceResponse" message="tns:deleteServiceResponse">
     </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="updateAction">
-      <wsdl:input name="updateAction" message="tns:updateAction">
+    <wsdl:operation name="selectProcedureByAdminLevel">
+      <wsdl:input name="selectProcedureByAdminLevel" message="tns:selectProcedureByAdminLevel">
     </wsdl:input>
-      <wsdl:output name="updateActionResponse" message="tns:updateActionResponse">
+      <wsdl:output name="selectProcedureByAdminLevelResponse" message="tns:selectProcedureByAdminLevelResponse">
     </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="selectActionByDeparment">
-      <wsdl:input name="selectActionByDeparment" message="tns:selectActionByDeparment">
+    <wsdl:operation name="updateProcedure">
+      <wsdl:input name="updateProcedure" message="tns:updateProcedure">
     </wsdl:input>
-      <wsdl:output name="selectActionByDeparmentResponse" message="tns:selectActionByDeparmentResponse">
+      <wsdl:output name="updateProcedureResponse" message="tns:updateProcedureResponse">
     </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="createAction">
-      <wsdl:input name="createAction" message="tns:createAction">
+    <wsdl:operation name="selectProcedureByDeparment">
+      <wsdl:input name="selectProcedureByDeparment" message="tns:selectProcedureByDeparment">
     </wsdl:input>
-      <wsdl:output name="createActionResponse" message="tns:createActionResponse">
+      <wsdl:output name="selectProcedureByDeparmentResponse" message="tns:selectProcedureByDeparmentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectServiceByAdminUnity">
+      <wsdl:input name="selectServiceByAdminUnity" message="tns:selectServiceByAdminUnity">
+    </wsdl:input>
+      <wsdl:output name="selectServiceByAdminUnityResponse" message="tns:selectServiceByAdminUnityResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteProcedure">
+      <wsdl:input name="deleteProcedure" message="tns:deleteProcedure">
+    </wsdl:input>
+      <wsdl:output name="deleteProcedureResponse" message="tns:deleteProcedureResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectServiceByDeparment">
+      <wsdl:input name="selectServiceByDeparment" message="tns:selectServiceByDeparment">
+    </wsdl:input>
+      <wsdl:output name="selectServiceByDeparmentResponse" message="tns:selectServiceByDeparmentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createProcedure">
+      <wsdl:input name="createProcedure" message="tns:createProcedure">
+    </wsdl:input>
+      <wsdl:output name="createProcedureResponse" message="tns:createProcedureResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createService">
+      <wsdl:input name="createService" message="tns:createService">
+    </wsdl:input>
+      <wsdl:output name="createServiceResponse" message="tns:createServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateService">
+      <wsdl:input name="updateService" message="tns:updateService">
+    </wsdl:input>
+      <wsdl:output name="updateServiceResponse" message="tns:updateServiceResponse">
     </wsdl:output>
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="queryServiceSoapBinding" type="tns:query">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-    <wsdl:operation name="selectActionByAdminUnity">
+    <wsdl:operation name="selectProcedureByAdminUnity">
       <soap:operation soapAction="" style="document"/>
-      <wsdl:input name="selectActionByAdminUnity">
+      <wsdl:input name="selectProcedureByAdminUnity">
         <soap:body use="literal"/>
       </wsdl:input>
-      <wsdl:output name="selectActionByAdminUnityResponse">
+      <wsdl:output name="selectProcedureByAdminUnityResponse">
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="selectActionByAdminLevel">
+    <wsdl:operation name="selectServiceByAdminLevel">
       <soap:operation soapAction="" style="document"/>
-      <wsdl:input name="selectActionByAdminLevel">
+      <wsdl:input name="selectServiceByAdminLevel">
         <soap:body use="literal"/>
       </wsdl:input>
-      <wsdl:output name="selectActionByAdminLevelResponse">
+      <wsdl:output name="selectServiceByAdminLevelResponse">
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="deleteAction">
+    <wsdl:operation name="deleteService">
       <soap:operation soapAction="" style="document"/>
-      <wsdl:input name="deleteAction">
+      <wsdl:input name="deleteService">
         <soap:body use="literal"/>
       </wsdl:input>
-      <wsdl:output name="deleteActionResponse">
+      <wsdl:output name="deleteServiceResponse">
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="updateAction">
+    <wsdl:operation name="selectProcedureByAdminLevel">
       <soap:operation soapAction="" style="document"/>
-      <wsdl:input name="updateAction">
+      <wsdl:input name="selectProcedureByAdminLevel">
         <soap:body use="literal"/>
       </wsdl:input>
-      <wsdl:output name="updateActionResponse">
+      <wsdl:output name="selectProcedureByAdminLevelResponse">
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="selectActionByDeparment">
+    <wsdl:operation name="updateProcedure">
       <soap:operation soapAction="" style="document"/>
-      <wsdl:input name="selectActionByDeparment">
+      <wsdl:input name="updateProcedure">
         <soap:body use="literal"/>
       </wsdl:input>
-      <wsdl:output name="selectActionByDeparmentResponse">
+      <wsdl:output name="updateProcedureResponse">
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="createAction">
+    <wsdl:operation name="selectProcedureByDeparment">
       <soap:operation soapAction="" style="document"/>
-      <wsdl:input name="createAction">
+      <wsdl:input name="selectProcedureByDeparment">
         <soap:body use="literal"/>
       </wsdl:input>
-      <wsdl:output name="createActionResponse">
+      <wsdl:output name="selectProcedureByDeparmentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectServiceByAdminUnity">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="selectServiceByAdminUnity">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="selectServiceByAdminUnityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteProcedure">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteProcedure">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteProcedureResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectServiceByDeparment">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="selectServiceByDeparment">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="selectServiceByDeparmentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createProcedure">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createProcedure">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createProcedureResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateServiceResponse">
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>

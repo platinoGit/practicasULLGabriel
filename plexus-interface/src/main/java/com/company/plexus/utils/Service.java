@@ -1,6 +1,9 @@
 package com.company.plexus.utils;
 
 import javax.xml.bind.annotation.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -19,32 +22,33 @@ import javax.xml.bind.annotation.*;
 		"sia_update_date",
 		"release_date",
 		"last_modification_date",
-		"family",
 		"start_date",
 		"finish_date",
 		"remarks"
 })
 
+@Entity
+@Table(name="SERVICE")
 public class Service {
 	protected String id;
 	protected int code;
 	protected String name;
 	protected String specific_name;
-	protected String department;
-	protected String resp_admin_uni;
+	protected Department department;
+	protected AdminUnity resp_admin_uni;
 	protected String route;
-	protected String start_of_procedure;
-	protected String ambit;
-	protected String admin_level;
+	protected ProcedureStart start_of_procedure;
+	protected Ambit ambit;
+	protected AdminLevel admin_level;
 	protected String sia_code;
 	protected String sia_update_date;
 	protected String release_date;
 	protected String last_modification_date;
-	protected String family;
 	protected String start_date;
 	protected String finish_date;
 	protected String remarks;
 	
+	@Id
 	public String getId() {
 		return id;
 	}
@@ -57,22 +61,22 @@ public class Service {
 	public String getSpecific_name() {
 		return specific_name;
 	}
-	public String getDepartment() {
+	public Department getDepartment() {
 		return department;
 	}
-	public String getResp_admin_uni() {
+	public AdminUnity getResp_admin_uni() {
 		return resp_admin_uni;
 	}
 	public String getRoute() {
 		return route;
 	}
-	public String getStart_of_procedure() {
+	public ProcedureStart getStart_of_procedure() {
 		return start_of_procedure;
 	}
-	public String getAmbit() {
+	public Ambit getAmbit() {
 		return ambit;
 	}
-	public String getAdmin_level() {
+	public AdminLevel getAdmin_level() {
 		return admin_level;
 	}
 	public String getSia_code() {
@@ -86,9 +90,6 @@ public class Service {
 	}
 	public String getLast_modification_date() {
 		return last_modification_date;
-	}
-	public String getFamily() {
-		return family;
 	}
 	public String getStart_date() {
 		return start_date;
@@ -112,22 +113,72 @@ public class Service {
 		this.specific_name = specific_name;
 	}
 	public void setDepartment(String department) {
-		this.department = department;
+		try {
+			for (Department single_department : Department.values()) {
+				if (single_department.label == department) {
+					this.department = single_department;							
+				} else {
+					throw new Exception("Departmento no valido");
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 	public void setResp_admin_uni(String resp_admin_uni) {
-		this.resp_admin_uni = resp_admin_uni;
+		try {
+			for (AdminUnity single_resp_admin_uni : AdminUnity.values()) {
+				if (single_resp_admin_uni.label == resp_admin_uni) {
+					this.resp_admin_uni = single_resp_admin_uni;							
+				} else {
+					throw new Exception("Unidad administrativa no valida");
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 	public void setRoute(String route) {
 		this.route = route;
 	}
 	public void setStart_of_procedure(String start_of_procedure) {
-		this.start_of_procedure = start_of_procedure;
+		try {
+			for (ProcedureStart single_start_of_procedure : ProcedureStart.values()) {
+				if (single_start_of_procedure.name() == start_of_procedure) {
+					this.start_of_procedure = single_start_of_procedure;							
+				} else {
+					throw new Exception("Comiezo de procedimiento no valido");
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 	public void setAmbit(String ambit) {
-		this.ambit = ambit;
+		try {
+			for (Ambit single_ambit : Ambit.values()) {
+				if (single_ambit.name() == ambit) {
+					this.ambit = single_ambit;					
+				} else {
+					throw new Exception("Ambito no valida");
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 	public void setAdmin_level(String admin_level) {
-		this.admin_level = admin_level;
+		try {
+			for (AdminLevel single_admin_level: AdminLevel.values()) {
+				if (single_admin_level.label == admin_level) {
+					this.admin_level = single_admin_level;					
+				} else {
+					throw new Exception("Ambito no valida");
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 	public void setSia_code(String sia_code) {
 		this.sia_code = sia_code;
@@ -140,9 +191,6 @@ public class Service {
 	}
 	public void setLast_modification_date(String last_modification_date) {
 		this.last_modification_date = last_modification_date;
-	}
-	public void setFamily(String family) {
-		this.family = family;
 	}
 	public void setStart_date(String start_date) {
 		this.start_date = start_date;
