@@ -30,8 +30,6 @@ import java.io.Serializable;
 		"remarks"
 })
 
-@Entity
-@Table(name="PROCEDURE")
 public class Procedure extends Service implements Serializable {
 	protected String id;
 	protected int code;
@@ -63,6 +61,10 @@ public class Procedure extends Service implements Serializable {
 
 	public ProcedureType getProcedure_type() {
 		return procedure_type;
+	}
+
+	public void setProcedure_type(ProcedureType procedure_type) {
+		this.procedure_type = procedure_type;
 	}
 
 	public void setProcedure_type(String procedure_type) {

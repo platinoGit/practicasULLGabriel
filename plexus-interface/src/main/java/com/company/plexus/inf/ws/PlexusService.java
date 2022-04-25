@@ -20,6 +20,7 @@ import com.company.plexus.utils.Service;
 			)
 
 public interface PlexusService {
+	
 	@WebMethod
 	@WebResult(name = "selectServiceByAdminUnity")
 	Service selectServiceByAdminUnity(@WebParam(name = "administrativeUnity") AdminUnity administrativeUnity);

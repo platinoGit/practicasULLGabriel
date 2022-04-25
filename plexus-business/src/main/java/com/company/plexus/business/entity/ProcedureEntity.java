@@ -1,35 +1,24 @@
-package com.company.plexus.utils;
+package com.company.plexus.business.entity;
 
-import javax.xml.bind.annotation.*;
+import com.company.plexus.business.entity.ServiceEntity;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Id;
+import javax.persistence.Column;
 
-@XmlRootElement
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {
-		"id",
-		"code",
-		"name",
-		"specific_name",
-		"department",
-		"resp_admin_uni",
-		"route",
-		"start_of_procedure",
-		"ambit",
-		"admin_level",
-		"sia_code",
-		"sia_update_date",
-		"release_date",
-		"last_modification_date",
-		"start_date",
-		"finish_date",
-		"remarks"
-})
+import com.company.plexus.utils.AdminLevel;
+import com.company.plexus.utils.AdminUnity;
+import com.company.plexus.utils.Ambit;
+import com.company.plexus.utils.Department;
 
+import com.company.plexus.utils.ProcedureStart;
+import com.company.plexus.utils.ProcedureType;
+
+// include Mapper
 @Entity
-@Table(name="SERVICE")
-public class Service {
+@Table(name="PROCEDURES")
+public class ProcedureEntity extends ServiceEntity {
+	
 	protected String id;
 	protected int code;
 	protected String name;
@@ -47,8 +36,18 @@ public class Service {
 	protected String start_date;
 	protected String finish_date;
 	protected String remarks;
+	private ProcedureType procedure_type;
+	private String family;
 	
-	@Id
+	public int hashCode() {
+		return id.hashCode();
+	}
+	
+	public boolean equals(Object obj) {
+		ProcedureEntity newProcedureEntity = (ProcedureEntity)obj;
+		return newProcedureEntity.getId().equals(this.getId());
+	}
+	
 	public String getId() {
 		return id;
 	}
@@ -100,6 +99,12 @@ public class Service {
 	public String getRemarks() {
 		return remarks;
 	}
+	public ProcedureType getProcedure_type() {
+		return procedure_type;
+	}
+	public String getFamily() {
+		return family;
+	}
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -118,6 +123,9 @@ public class Service {
 	public void setResp_admin_uni(AdminUnity resp_admin_uni) {
 		this.resp_admin_uni = resp_admin_uni;
 	}
+	public void setRoute(String route) {
+		this.route = route;
+	}
 	public void setStart_of_procedure(ProcedureStart start_of_procedure) {
 		this.start_of_procedure = start_of_procedure;
 	}
@@ -126,75 +134,6 @@ public class Service {
 	}
 	public void setAdmin_level(AdminLevel admin_level) {
 		this.admin_level = admin_level;
-	}
-	
-	public void setDepartment(String department) {
-		try {
-			for (Department single_department : Department.values()) {
-				if (single_department.label == department) {
-					this.department = single_department;							
-				} else {
-					throw new Exception("Departmento no valido");
-				}
-			}
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-	}
-	public void setResp_admin_uni(String resp_admin_uni) {
-		try {
-			for (AdminUnity single_resp_admin_uni : AdminUnity.values()) {
-				if (single_resp_admin_uni.label == resp_admin_uni) {
-					this.resp_admin_uni = single_resp_admin_uni;							
-				} else {
-					throw new Exception("Unidad administrativa no valida");
-				}
-			}
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-	}
-	public void setRoute(String route) {
-		this.route = route;
-	}
-	public void setStart_of_procedure(String start_of_procedure) {
-		try {
-			for (ProcedureStart single_start_of_procedure : ProcedureStart.values()) {
-				if (single_start_of_procedure.name() == start_of_procedure) {
-					this.start_of_procedure = single_start_of_procedure;							
-				} else {
-					throw new Exception("Comiezo de procedimiento no valido");
-				}
-			}
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-	}
-	public void setAmbit(String ambit) {
-		try {
-			for (Ambit single_ambit : Ambit.values()) {
-				if (single_ambit.name() == ambit) {
-					this.ambit = single_ambit;					
-				} else {
-					throw new Exception("Ambito no valida");
-				}
-			}
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-	}
-	public void setAdmin_level(String admin_level) {
-		try {
-			for (AdminLevel single_admin_level: AdminLevel.values()) {
-				if (single_admin_level.label == admin_level) {
-					this.admin_level = single_admin_level;					
-				} else {
-					throw new Exception("Ambito no valida");
-				}
-			}
-		} catch (Exception e) {
-			System.out.println(e);
-		}
 	}
 	public void setSia_code(String sia_code) {
 		this.sia_code = sia_code;
@@ -216,5 +155,11 @@ public class Service {
 	}
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
+	}
+	public void setProcedure_type(ProcedureType procedure_type) {
+		this.procedure_type = procedure_type;
+	}
+	public void setFamily(String family) {
+		this.family = family;
 	}
 }

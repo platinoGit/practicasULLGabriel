@@ -20,10 +20,10 @@ public class BusinessLogic {
 		return getService().selectServiceByDepartment(department, exchange);
 	}
 	
-	public Service[] selectServiceByByAdminLevel(String level, Exchange exchange) {
-		return getService().selectServiceByByAdminLevel(level, exchange);
-	}
-	
+//	public Service[] selectServiceByByAdminLevel(String level, Exchange exchange) {
+//		return getService().selectServiceByByAdminLevel(level, exchange);
+//	}
+//	
 	public Procedure[] selectProcedureByAdminUnity(AdminUnity administrativeUnity, Exchange exchange) {
 		return getProcedure().selectProcedureByAdminUnity(administrativeUnity, exchange);
 	}

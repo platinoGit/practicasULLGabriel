@@ -1,0 +1,13 @@
+package com.company.plexus.business.dao;
+
+
+import java.util.ArrayList;
+import org.apache.camel.Exchange;
+
+import com.company.plexus.business.entity.ServiceEntity;
+
+public interface GenericDao {
+	public <T> void create(T object, Exchange exchange);
+	public <T> void update(T newObject, Exchange exchange);
+	public <T> void delete(String table, String Id, Exchange exchange);
+}

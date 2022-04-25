@@ -1,52 +1,57 @@
-package com.company.plexus.business.logic;
-
-import org.apache.camel.Exchange;
-
-import com.company.plexus.utils.AdminUnity;
-import com.company.plexus.utils.Department;
-import com.company.plexus.utils.Procedure;
-import java.util.ArrayList;
-import java.util.Arrays;
-import com.company.datastore.crud.CrudUtils;
-
-public class ProcedureLogic {
-	private CrudUtils crud;
-	
-	public Procedure[] selectProcedureByAdminUnity(AdminUnity administrativeUnity, Exchange exchange) {
-		ArrayList<String> fields = new ArrayList<String>(Arrays.asList("resp_admin_uni"));
-		ArrayList<String> matchings = new ArrayList<String>(Arrays.asList(administrativeUnity.label));
-		ArrayList<Procedure> objects = crud.select(Procedure.class, fields, matchings, "PROCEDURE", exchange);
-		 
-		return objects.toArray(new Procedure[0]);
-	}
-	
-	public Procedure[] selectProcedureByDepartment(Department department, Exchange exchange) {
-		ArrayList<String> fields = new ArrayList<String>(Arrays.asList("department"));
-		ArrayList<String> matchings = new ArrayList<String>(Arrays.asList(department.label));
-		ArrayList<Object[]> objects = crud.select(Procedure.class, fields, matchings, "PROCEDURE", exchange);
-		
-		return objects.toArray(new Procedure[0]);
-	}
-	
-	public Procedure[] selectProcedureByByAdminLevel(String level, Exchange exchange) {
-		ArrayList<String> fields = new ArrayList<String>(Arrays.asList("admin_level"));
-		ArrayList<String> matchings = new ArrayList<String>(Arrays.asList(level));
-		ArrayList<Object[]> objects = crud.select(Procedure.class, fields, matchings, "PROCEDURE", exchange);
-		
-		return objects.toArray(new Procedure[0]);
-	}
-	
-	public void createProcedure(Procedure procedure, Exchange exchange) {
- 		crud.create(procedure, exchange);
-	}
-	
-	public void updateProcedure(String procedureId, Procedure newProcedure, Exchange exchange) {
-		crud.update(procedureId, newProcedure, exchange);
-	}
-	
-	public void deleteProcedure(String procedureId, Exchange exchange) {
-		crud.delete("PROCEDURE", procedureId, exchange);
-	}
+//package com.company.plexus.business.logic;
+//
+//import org.apache.camel.Exchange;
+//
+//import com.company.plexus.business.logic.Controller;
+//import com.company.plexus.utils.AdminUnity;
+//import com.company.plexus.utils.Department;
+//import com.company.plexus.utils.Procedure;
+//import java.util.ArrayList;
+//import java.util.Arrays;
+//import com.company.datastore.crud.CrudUtils;
+//
+//public class ProcedureLogic {
+//	private Controller controller;
+//	
+//	public Procedure[] selectProcedureByAdminUnity(AdminUnity administrativeUnity, Exchange exchange) {
+//		ArrayList<String> fields = new ArrayList<String>(Arrays.asList("resp_admin_uni"));
+//		ArrayList<String> matchings = new ArrayList<String>(Arrays.asList(administrativeUnity.label));
+//		ArrayList<Procedure> objects = crud.select(Procedure.class, fields, matchings, "PROCEDURE", exchange);
+//		 
+//		return objects.toArray(new Procedure[0]);
+//	}
+//	
+//	public Procedure[] selectProcedureByDepartment(Department department, Exchange exchange) {
+//		ArrayList<String> fields = new ArrayList<String>(Arrays.asList("department"));
+//		ArrayList<String> matchings = new ArrayList<String>(Arrays.asList(department.label));
+//		ArrayList<Object[]> objects = crud.select(Procedure.class, fields, matchings, "PROCEDURE", exchange);
+//		
+//		return objects.toArray(new Procedure[0]);
+//	}
+//	
+//	public Procedure[] selectProcedureByByAdminLevel(String level, Exchange exchange) {
+////		ArrayList<String> fields = new ArrayList<String>(Arrays.asList("admin_level"));
+////		ArrayList<String> matchings = new ArrayList<String>(Arrays.asList(level));
+////		ArrayList<Object[]> objects = crud.select(Procedure.class, fields, matchings, "PROCEDURE", exchange);
+////		return objects.toArray(new Procedure[0]);
+//		return getController().selectProcedureByAdminLevel(level, exchange);
+//	}
+//	
+//	public void createProcedure(Procedure procedure, Exchange exchange) {
+// 		getController().createProcedure(procedure, exchange);
+//	}
+//	
+//	public void updateProcedure(String procedureId, Procedure newProcedure, Exchange exchange) {
+//		getController().updateProcedure(newProcedure, exchange);
+//	}
+//	
+//	public void deleteProcedure(String procedureId, Exchange exchange) {
+//		getController().deleteAction("PROCEDURE", procedureId, exchange);
+//	}
+//	
+//	public Controller getController() {
+//		return this.controller;
+//	}
 	
 //	private Procedure convertObjectToProcedure(Object[] object) {
 //		Procedure procedure = new Procedure();

@@ -10,7 +10,5 @@ public class EntrypointRoutes extends RouteBuilder {
 		
 		.when(header(CxfConstants.OPERATION_NAME))
 		.to("direct-vm:plexus-business");
-		
-		from("seda:incomingOrders").to("mock:end");
 	}
 }

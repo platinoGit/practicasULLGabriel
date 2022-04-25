@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:camel="http://camel.apache.org/schema/spring"
+    xmlns:cxf="http://camel.apache.org/schema/cxf"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-2.9.xsd               http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd       http://camel.apache.org/schema/spring https://camel.apache.org/schema/spring/camel-spring.xsd">
+    <cxf:cxfEndpoint address="/query_service/" id="plexus-entrypoint" serviceClass="com.company.plexus.inf.ws.PlexusService"/>
+    <camelContext id="_camelContext1" xmlns="http://camel.apache.org/scheme/spring">
+        <packageScan>com.company.plexus.entrypoint.utils</packageScan>
+    </camelContext>
+</beans>

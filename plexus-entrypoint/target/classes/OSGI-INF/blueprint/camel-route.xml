@@ -8,8 +8,8 @@
              http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
 
   <cxf:cxfEndpoint id="plexus-entrypoint"
-                   address="/contract_first_test/"
-                   serviceClass="com.mycompany.project.plexus.cxf.contractfirst.TestEndpoint"/>
+                   address="/query_service/"
+                   serviceClass="com.company.plexus.inf.ws.PlexusService"/>
                    
   <camelContext xmlns ="http://camel.apache.org/scheme/spring">
   <packageScan>com.company.plexus.entrypoint.utils</packageScan>

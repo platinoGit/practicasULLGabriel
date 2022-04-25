@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:camel="http://camel.apache.org/schema/spring"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-2.9.xsd          http://camel.apache.org/schema/spring https://camel.apache.org/schema/spring/camel-spring.xsd">
+    
+	<camelContext id="camelContext-7" xmlns="http://camel.apache.org/schema/spring">
+        <packageScan>com.company.plexus.business.routing</packageScan>
+        <bean class="com.company.plexus.BusinessLogic" id="businessLogic"/>
+    </camelContext>
+
+</beans>
