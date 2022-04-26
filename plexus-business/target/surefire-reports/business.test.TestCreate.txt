@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: business.test.TestCreate
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.722 s <<< FAILURE! - in business.test.TestCreate
+testCreate(business.test.TestCreate)  Time elapsed: 1.659 s  <<< ERROR!
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at business.test.TestCreate.testCreate(TestCreate.java:30)
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at business.test.TestCreate.testCreate(TestCreate.java:30)
+Caused by: org.postgresql.util.PSQLException: 
+ERROR: column "dtype" of relation "services" does not exist
+  Position: 233
+	at business.test.TestCreate.testCreate(TestCreate.java:30)
+

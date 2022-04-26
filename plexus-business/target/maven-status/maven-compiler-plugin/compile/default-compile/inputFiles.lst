@@ -1,0 +1,14 @@
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/entity/ServiceEntity.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/datastore/crud/CrudUtils.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/mappers/ServiceMapper.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/daoImpl/ServiceDaoImpl.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/dao/ServiceDao.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/dao/GenericDao.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/logic/Controller.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/entity/ProcedureEntity.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/daoImpl/GenericDaoImpl.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/logic/BusinessLogic.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/mappers/ProcedureMapper.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/logic/ProcedureLogic.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/logic/ServiceLogic.java
+/home/gabriel/workspace/plexus-project/plexus-business/src/main/java/com/company/plexus/business/routing/MainRoutes.java

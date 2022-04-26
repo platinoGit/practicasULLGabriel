@@ -1,6 +1,5 @@
 package com.company.plexus.business.logic;
 
-import com.company.datastore.crud.CrudUtils;
 import org.apache.camel.Exchange;
 import org.mapstruct.factory.Mappers;
 

@@ -11,11 +11,15 @@ import com.company.plexus.business.dao.ServiceDao;
 public class ServiceDaoImpl extends GenericDaoImpl implements ServiceDao {
 	private EntityManager entityManager;
 	
+	public ServiceDaoImpl() {
+		super();
+	}
+	
 	@Override
 	public ArrayList<ServiceEntity> selectByAdminUnity(String admin_unity, Exchange exchange) {
 		JpaResultMapper jpaResultMapper = new JpaResultMapper();
 		javax.persistence.Query q = entityManager.createQuery("SELECT * FROM SERVICE WHERE ADMIN_UNITY=:admin_unity");
-		q.setParameter("ADMIN_UNITY", admin_unity);
+		q.setParameter("RESP_ADMIN_UNITY", admin_unity);
 		return new ArrayList<ServiceEntity>(jpaResultMapper.list(q, ServiceEntity.class));
 	}
 	

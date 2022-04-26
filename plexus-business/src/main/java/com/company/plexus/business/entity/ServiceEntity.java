@@ -2,59 +2,66 @@ package com.company.plexus.business.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
-import org.mapstruct.factory.Mappers;
-
-import java.io.Serializable;
-
+import javax.persistence.Id;
 import javax.persistence.Column;
-
-import com.company.plexus.business.mappers.ServiceMapper;
 
 import com.company.plexus.utils.AdminLevel;
 import com.company.plexus.utils.AdminUnity;
 import com.company.plexus.utils.Ambit;
 import com.company.plexus.utils.Department;
-import com.company.plexus.utils.Service;
-
-import jdk.internal.module.ModuleLoaderMap.Mapper;
-
 import com.company.plexus.utils.ProcedureStart;
 
-// include Mapper
 @Entity
-@Table(name="PROCEDURES")
-public class ServiceEntity implements Serializable {
+@Table(name="SERVICES")
+public class ServiceEntity {
 	
-	protected String id;
-	protected int code;
-	protected String name;
-	protected String specific_name;
-	protected Department department;
-	protected AdminUnity resp_admin_uni;
-	protected String route;
-	protected ProcedureStart start_of_procedure;
-	protected Ambit ambit;
-	protected AdminLevel admin_level;
-	protected String sia_code;
-	protected String sia_update_date;
-	protected String release_date;
-	protected String last_modification_date;
-	protected String start_date;
-	protected String finish_date;
-	protected String remarks;
+	@Id
+	@Column(name="CODE")
+	private int code;
+	@Column(name="NAME")
+	private String name;
+	@Column(name="SPECIFIC_NAME")
+	private String specific_name;
+	@Column(name="DEPARTMENT")
+	private Department department;
+	@Column(name="RESP_ADMIN_UNITY")
+	private AdminUnity resp_admin_uni;
+	@Column(name="ROUTE")
+	private String route;
+	@Column(name="ACTION_TYPE")
+	private String action_type;
+	@Column(name="START_OF_PROCEDURE")
+	private ProcedureStart start_of_procedure;
+	@Column(name="AMBIT")
+	private Ambit ambit;
+	@Column(name="ADMIN_LEVEL")
+	private AdminLevel admin_level;
+	@Column(name="SIA_CODE")
+	private String sia_code;
+	@Column(name="SIA_UPDATE_DATE")
+	private String sia_update_date;
+	@Column(name="RELEASE_DATE")
+	private String release_date;
+	@Column(name="LAST_MODIFICATION_DATE")
+	private String last_modification_date;
+	@Column(name="START_DATE")
+	private String start_date;
+	@Column(name="FINISH_DATE")
+	private String finish_date;
+	@Column(name="REMARKS")
+	private String remarks;
 	
 	public int hashCode() {
-		return id.hashCode();
+		return code;
 	}
 	
 	public boolean equals(Object obj) {
 		ServiceEntity newServiceEntity = (ServiceEntity)obj;
-		return newServiceEntity.getId().equals(this.getId());
+		return newServiceEntity.getCode() == this.getCode();
 	}
 	
-	public String getId() {
-		return id;
+	public String getAction_type() {
+		return action_type;
 	}
 
 	public int getCode() {
@@ -121,8 +128,8 @@ public class ServiceEntity implements Serializable {
 		return remarks;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setAction_type(String action_type) {
+		this.action_type = action_type;
 	}
 
 	public void setCode(int code) {
@@ -188,5 +195,4 @@ public class ServiceEntity implements Serializable {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-	
 }
