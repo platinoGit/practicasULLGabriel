@@ -3,6 +3,8 @@ package com.company.plexus.business.daoImpl;
 import java.util.ArrayList;
 
 import org.apache.camel.Exchange;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
@@ -17,10 +19,14 @@ public class GenericDaoImpl implements GenericDao {
 	}
 	@Override
 	public <T> boolean create(T object, Exchange exchange) {
-		entityManager.getTransaction().begin();
-		entityManager.persist(object);
-		entityManager.flush();
-		return true;
+		try {
+			entityManager.getTransaction().begin();
+			entityManager.persist(object);
+			entityManager.flush();
+			return true;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 	
 	@Override

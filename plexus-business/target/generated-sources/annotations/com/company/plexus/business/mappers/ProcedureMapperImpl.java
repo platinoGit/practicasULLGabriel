@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-26T14:04:50+0100",
+    date = "2022-04-28T13:19:43+0100",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.14.1 (Ubuntu)"
 )
 public class ProcedureMapperImpl implements ProcedureMapper {
@@ -19,16 +19,16 @@ public class ProcedureMapperImpl implements ProcedureMapper {
 
         ProcedureEntity procedureEntity = new ProcedureEntity();
 
+        procedureEntity.setDepartment( procedure.getDepartment() );
+        procedureEntity.setResp_admin_uni( procedure.getResp_admin_uni() );
+        procedureEntity.setStart_of_procedure( procedure.getStart_of_procedure() );
+        procedureEntity.setAmbit( procedure.getAmbit() );
+        procedureEntity.setAdmin_level( procedure.getAdmin_level() );
         procedureEntity.setId( procedure.getId() );
         procedureEntity.setCode( procedure.getCode() );
         procedureEntity.setName( procedure.getName() );
         procedureEntity.setSpecific_name( procedure.getSpecific_name() );
-        procedureEntity.setDepartment( procedure.getDepartment() );
-        procedureEntity.setResp_admin_uni( procedure.getResp_admin_uni() );
         procedureEntity.setRoute( procedure.getRoute() );
-        procedureEntity.setStart_of_procedure( procedure.getStart_of_procedure() );
-        procedureEntity.setAmbit( procedure.getAmbit() );
-        procedureEntity.setAdmin_level( procedure.getAdmin_level() );
         procedureEntity.setSia_code( procedure.getSia_code() );
         procedureEntity.setSia_update_date( procedure.getSia_update_date() );
         procedureEntity.setRelease_date( procedure.getRelease_date() );

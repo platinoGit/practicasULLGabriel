@@ -47,7 +47,6 @@ public class CrudUtils {
 	}
 	
 	public <T> void delete(String table, String id, Exchange exchange) {
-		
 		javax.persistence.Query q = entityManager.createQuery("Delete from " + table + " where id = :id");
 		q.setParameter("id", id);
 		entityManager.flush();

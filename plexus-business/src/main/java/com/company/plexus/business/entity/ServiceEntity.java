@@ -3,6 +3,8 @@ package com.company.plexus.business.entity;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Column;
 
 import com.company.plexus.utils.AdminLevel;
@@ -18,36 +20,52 @@ public class ServiceEntity {
 	@Id
 	@Column(name="CODE")
 	private int code;
+	
 	@Column(name="NAME")
 	private String name;
+	
 	@Column(name="SPECIFIC_NAME")
 	private String specific_name;
+	
 	@Column(name="DEPARTMENT")
-	private Department department;
+	private String department;
+	
 	@Column(name="RESP_ADMIN_UNITY")
-	private AdminUnity resp_admin_uni;
+	private String resp_admin_uni;
+	
 	@Column(name="ROUTE")
 	private String route;
+	
 	@Column(name="ACTION_TYPE")
 	private String action_type;
+	
 	@Column(name="START_OF_PROCEDURE")
-	private ProcedureStart start_of_procedure;
+	private String start_of_procedure;
+	
 	@Column(name="AMBIT")
-	private Ambit ambit;
+	private String ambit;
+	
 	@Column(name="ADMIN_LEVEL")
-	private AdminLevel admin_level;
+	private String admin_level;
+	
 	@Column(name="SIA_CODE")
 	private String sia_code;
+	
 	@Column(name="SIA_UPDATE_DATE")
 	private String sia_update_date;
+	
 	@Column(name="RELEASE_DATE")
 	private String release_date;
+	
 	@Column(name="LAST_MODIFICATION_DATE")
 	private String last_modification_date;
+	
 	@Column(name="START_DATE")
 	private String start_date;
+	
 	@Column(name="FINISH_DATE")
 	private String finish_date;
+	
 	@Column(name="REMARKS")
 	private String remarks;
 	
@@ -76,57 +94,57 @@ public class ServiceEntity {
 		return specific_name;
 	}
 
-	public Department getDepartment() {
-		return department;
-	}
-
-	public AdminUnity getResp_admin_uni() {
-		return resp_admin_uni;
-	}
-
-	public String getRoute() {
-		return route;
-	}
-
-	public ProcedureStart getStart_of_procedure() {
-		return start_of_procedure;
-	}
-
-	public Ambit getAmbit() {
-		return ambit;
-	}
-
-	public AdminLevel getAdmin_level() {
-		return admin_level;
-	}
-
-	public String getSia_code() {
-		return sia_code;
-	}
-
-	public String getSia_update_date() {
-		return sia_update_date;
-	}
-
-	public String getRelease_date() {
-		return release_date;
-	}
-
-	public String getLast_modification_date() {
-		return last_modification_date;
-	}
-
-	public String getStart_date() {
-		return start_date;
-	}
-
-	public String getFinish_date() {
-		return finish_date;
-	}
-
-	public String getRemarks() {
-		return remarks;
-	}
+//	public Department getDepartment() {
+//		return department;
+//	}
+//
+//	public AdminUnity getResp_admin_uni() {
+//		return resp_admin_uni;
+//	}
+//
+//	public String getRoute() {
+//		return route;
+//	}
+//
+//	public ProcedureStart getStart_of_procedure() {
+//		return start_of_procedure;
+//	}
+//
+//	public Ambit getAmbit() {
+//		return ambit;
+//	}
+//
+//	public AdminLevel getAdmin_level() {
+//		return admin_level;
+//	}
+//
+//	public String getSia_code() {
+//		return sia_code;
+//	}
+//
+//	public String getSia_update_date() {
+//		return sia_update_date;
+//	}
+//
+//	public String getRelease_date() {
+//		return release_date;
+//	}
+//
+//	public String getLast_modification_date() {
+//		return last_modification_date;
+//	}
+//
+//	public String getStart_date() {
+//		return start_date;
+//	}
+//
+//	public String getFinish_date() {
+//		return finish_date;
+//	}
+//
+//	public String getRemarks() {
+//		return remarks;
+//	}
 
 	public void setAction_type(String action_type) {
 		this.action_type = action_type;
@@ -144,11 +162,11 @@ public class ServiceEntity {
 		this.specific_name = specific_name;
 	}
 
-	public void setDepartment(Department department) {
+	public void setDepartment(String department) {
 		this.department = department;
 	}
 
-	public void setResp_admin_uni(AdminUnity resp_admin_uni) {
+	public void setResp_admin_uni(String resp_admin_uni) {
 		this.resp_admin_uni = resp_admin_uni;
 	}
 
@@ -156,15 +174,15 @@ public class ServiceEntity {
 		this.route = route;
 	}
 
-	public void setStart_of_procedure(ProcedureStart start_of_procedure) {
+	public void setStart_of_procedure(String start_of_procedure) {
 		this.start_of_procedure = start_of_procedure;
 	}
 
-	public void setAmbit(Ambit ambit) {
+	public void setAmbit(String ambit) {
 		this.ambit = ambit;
 	}
 
-	public void setAdmin_level(AdminLevel admin_level) {
+	public void setAdmin_level(String admin_level) {
 		this.admin_level = admin_level;
 	}
 
