@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-28T13:19:43+0100",
+    date = "2022-05-06T12:02:37+0100",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.14.1 (Ubuntu)"
 )
 public class ProcedureMapperImpl implements ProcedureMapper {
@@ -19,13 +19,27 @@ public class ProcedureMapperImpl implements ProcedureMapper {
 
         ProcedureEntity procedureEntity = new ProcedureEntity();
 
-        procedureEntity.setDepartment( procedure.getDepartment() );
-        procedureEntity.setResp_admin_uni( procedure.getResp_admin_uni() );
-        procedureEntity.setStart_of_procedure( procedure.getStart_of_procedure() );
-        procedureEntity.setAmbit( procedure.getAmbit() );
-        procedureEntity.setAdmin_level( procedure.getAdmin_level() );
-        procedureEntity.setId( procedure.getId() );
-        procedureEntity.setCode( procedure.getCode() );
+        if ( procedure.getDepartment() != null ) {
+            procedureEntity.setDepartment( procedure.getDepartment().name() );
+        }
+        if ( procedure.getResp_admin_uni() != null ) {
+            procedureEntity.setResp_admin_uni( procedure.getResp_admin_uni().name() );
+        }
+        if ( procedure.getStart_of_procedure() != null ) {
+            procedureEntity.setStart_of_procedure( procedure.getStart_of_procedure().name() );
+        }
+        if ( procedure.getAmbit() != null ) {
+            procedureEntity.setAmbit( procedure.getAmbit().name() );
+        }
+        if ( procedure.getAdmin_level() != null ) {
+            procedureEntity.setAdmin_level( procedure.getAdmin_level().name() );
+        }
+        if ( procedure.getProcedure_type() != null ) {
+            procedureEntity.setProcedure_type( procedure.getProcedure_type().name() );
+        }
+        if ( procedure.getId() != null ) {
+            procedureEntity.setId( Integer.parseInt( procedure.getId() ) );
+        }
         procedureEntity.setName( procedure.getName() );
         procedureEntity.setSpecific_name( procedure.getSpecific_name() );
         procedureEntity.setRoute( procedure.getRoute() );
@@ -36,7 +50,6 @@ public class ProcedureMapperImpl implements ProcedureMapper {
         procedureEntity.setStart_date( procedure.getStart_date() );
         procedureEntity.setFinish_date( procedure.getFinish_date() );
         procedureEntity.setRemarks( procedure.getRemarks() );
-        procedureEntity.setProcedure_type( procedure.getProcedure_type() );
         procedureEntity.setFamily( procedure.getFamily() );
 
         return procedureEntity;
@@ -50,26 +63,15 @@ public class ProcedureMapperImpl implements ProcedureMapper {
 
         Procedure procedure = new Procedure();
 
-        procedure.setId( procedureEntity.getId() );
-        procedure.setCode( procedureEntity.getCode() );
+        procedure.setId( String.valueOf( procedureEntity.getId() ) );
         procedure.setName( procedureEntity.getName() );
         procedure.setSpecific_name( procedureEntity.getSpecific_name() );
-        if ( procedureEntity.getDepartment() != null ) {
-            procedure.setDepartment( procedureEntity.getDepartment().name() );
-        }
-        if ( procedureEntity.getResp_admin_uni() != null ) {
-            procedure.setResp_admin_uni( procedureEntity.getResp_admin_uni().name() );
-        }
+        procedure.setDepartment( procedureEntity.getDepartment() );
+        procedure.setResp_admin_uni( procedureEntity.getResp_admin_uni() );
         procedure.setRoute( procedureEntity.getRoute() );
-        if ( procedureEntity.getStart_of_procedure() != null ) {
-            procedure.setStart_of_procedure( procedureEntity.getStart_of_procedure().name() );
-        }
-        if ( procedureEntity.getAmbit() != null ) {
-            procedure.setAmbit( procedureEntity.getAmbit().name() );
-        }
-        if ( procedureEntity.getAdmin_level() != null ) {
-            procedure.setAdmin_level( procedureEntity.getAdmin_level().name() );
-        }
+        procedure.setStart_of_procedure( procedureEntity.getStart_of_procedure() );
+        procedure.setAmbit( procedureEntity.getAmbit() );
+        procedure.setAdmin_level( procedureEntity.getAdmin_level() );
         procedure.setSia_code( procedureEntity.getSia_code() );
         procedure.setSia_update_date( procedureEntity.getSia_update_date() );
         procedure.setRelease_date( procedureEntity.getRelease_date() );
@@ -78,9 +80,7 @@ public class ProcedureMapperImpl implements ProcedureMapper {
         procedure.setFinish_date( procedureEntity.getFinish_date() );
         procedure.setRemarks( procedureEntity.getRemarks() );
         procedure.setFamily( procedureEntity.getFamily() );
-        if ( procedureEntity.getProcedure_type() != null ) {
-            procedure.setProcedure_type( procedureEntity.getProcedure_type().name() );
-        }
+        procedure.setProcedure_type( procedureEntity.getProcedure_type() );
 
         return procedure;
     }

@@ -8,6 +8,6 @@ import com.company.plexus.business.entity.ServiceEntity;
 
 public interface GenericDao {
 	public <T> boolean create(T object, Exchange exchange) throws Exception;
-	public <T> void update(T newObject, Exchange exchange);
-	public <T> void delete(String table, String Id, Exchange exchange);
+	public <T> boolean update(T newObject, Exchange exchange);
+	public <T> boolean delete(String table, String Id, Exchange exchange);
 }

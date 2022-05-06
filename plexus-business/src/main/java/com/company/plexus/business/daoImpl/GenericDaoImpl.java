@@ -15,6 +15,7 @@ public class GenericDaoImpl implements GenericDao {
 	EntityManager entityManager;
 	
 	public GenericDaoImpl() {
+		super();
 		entityManager = Persistence.createEntityManagerFactory("entityManager").createEntityManager();
 	}
 	@Override
@@ -30,16 +31,26 @@ public class GenericDaoImpl implements GenericDao {
 	}
 	
 	@Override
-	public <T> void update(T newObject, Exchange exchange) {
-		entityManager.getTransaction().begin();
-		entityManager.merge(newObject);
-		entityManager.flush();
+	public <T> boolean update(T newObject, Exchange exchange) {
+		try {
+			entityManager.getTransaction().begin();
+			entityManager.merge(newObject);
+			entityManager.flush();
+			return true;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 	
 	@Override
-	public <T> void delete(String table, String id, Exchange exchange) {
-		javax.persistence.Query q = entityManager.createQuery("Delete from " + table + " where CODE = :id");
-		q.setParameter("id", id);
-		entityManager.flush();
+	public <T> boolean delete(String table, String id, Exchange exchange) {
+		try {
+			javax.persistence.Query q = entityManager.createQuery("Delete from " + table + " where CODE = :id");
+			q.setParameter("id", id);
+			entityManager.flush();
+			return true;
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 }

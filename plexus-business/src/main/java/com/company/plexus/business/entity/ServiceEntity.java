@@ -3,8 +3,9 @@ package com.company.plexus.business.entity;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+
+import java.io.Serializable;
+
 import javax.persistence.Column;
 
 import com.company.plexus.utils.AdminLevel;
@@ -17,9 +18,13 @@ import com.company.plexus.utils.ProcedureStart;
 @Table(name="SERVICES")
 public class ServiceEntity {
 	
+	/**
+	 * 
+	 */
+
 	@Id
-	@Column(name="CODE")
-	private int code;
+	@Column(name="ID")
+	private int id;
 	
 	@Column(name="NAME")
 	private String name;
@@ -49,7 +54,7 @@ public class ServiceEntity {
 	private String admin_level;
 	
 	@Column(name="SIA_CODE")
-	private String sia_code;
+	private int sia_code;
 	
 	@Column(name="SIA_UPDATE_DATE")
 	private String sia_update_date;
@@ -70,20 +75,20 @@ public class ServiceEntity {
 	private String remarks;
 	
 	public int hashCode() {
-		return code;
+		return id;
 	}
 	
 	public boolean equals(Object obj) {
 		ServiceEntity newServiceEntity = (ServiceEntity)obj;
-		return newServiceEntity.getCode() == this.getCode();
+		return newServiceEntity.getId() == this.getId();
 	}
 	
 	public String getAction_type() {
 		return action_type;
 	}
 
-	public int getCode() {
-		return code;
+	public int getId() {
+		return id;
 	}
 
 	public String getName() {
@@ -150,8 +155,60 @@ public class ServiceEntity {
 		this.action_type = action_type;
 	}
 
-	public void setCode(int code) {
-		this.code = code;
+	public String getDepartment() {
+		return department;
+	}
+
+	public String getResp_admin_uni() {
+		return resp_admin_uni;
+	}
+
+	public String getRoute() {
+		return route;
+	}
+
+	public String getStart_of_procedure() {
+		return start_of_procedure;
+	}
+
+	public String getAmbit() {
+		return ambit;
+	}
+
+	public String getAdmin_level() {
+		return admin_level;
+	}
+
+	public int getSia_code() {
+		return sia_code;
+	}
+
+	public String getSia_update_date() {
+		return sia_update_date;
+	}
+
+	public String getRelease_date() {
+		return release_date;
+	}
+
+	public String getLast_modification_date() {
+		return last_modification_date;
+	}
+
+	public String getStart_date() {
+		return start_date;
+	}
+
+	public String getFinish_date() {
+		return finish_date;
+	}
+
+	public String getRemarks() {
+		return remarks;
+	}
+
+	public void setId(int code) {
+		this.id = code;
 	}
 
 	public void setName(String name) {
@@ -186,7 +243,7 @@ public class ServiceEntity {
 		this.admin_level = admin_level;
 	}
 
-	public void setSia_code(String sia_code) {
+	public void setSia_code(int sia_code) {
 		this.sia_code = sia_code;
 	}
 

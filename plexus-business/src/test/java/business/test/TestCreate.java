@@ -21,7 +21,7 @@ public class TestCreate {
 	@Before
 	public void setUp() throws Exception {
 		entity = new ServiceEntity();
-		entity.setCode(0);
+		entity.setId(4000);
 		entity.setName("Test");
 		entity.setSpecific_name("test");
 //		entity.setDepartment(Department.ADMIN_PUBLIC);
@@ -37,7 +37,7 @@ public class TestCreate {
 		entity.setStart_of_procedure("test");
 		entity.setAmbit("test");
 		entity.setAdmin_level("test");
-		entity.setSia_code("test");
+		entity.setSia_code(999);
 		entity.setSia_update_date("test");
 		entity.setRelease_date("test");
 		entity.setLast_modification_date("test");
@@ -54,7 +54,7 @@ public class TestCreate {
 	@Test
 	public void testCreate() {
 		ServiceDaoImpl imp = new ServiceDaoImpl();
-		assertTrue(imp.create(entity, null));
+		assertTrue(imp.update(entity, null));
 	}
 
 }

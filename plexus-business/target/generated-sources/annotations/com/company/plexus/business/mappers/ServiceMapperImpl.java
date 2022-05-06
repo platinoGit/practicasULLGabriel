@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-28T13:19:43+0100",
+    date = "2022-05-06T12:02:37+0100",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.14.1 (Ubuntu)"
 )
 public class ServiceMapperImpl implements ServiceMapper {
@@ -19,7 +19,9 @@ public class ServiceMapperImpl implements ServiceMapper {
 
         ServiceEntity serviceEntity = new ServiceEntity();
 
-        serviceEntity.setCode( service.getCode() );
+        if ( service.getId() != null ) {
+            serviceEntity.setId( Integer.parseInt( service.getId() ) );
+        }
         serviceEntity.setName( service.getName() );
         serviceEntity.setSpecific_name( service.getSpecific_name() );
         if ( service.getDepartment() != null ) {
@@ -38,7 +40,9 @@ public class ServiceMapperImpl implements ServiceMapper {
         if ( service.getAdmin_level() != null ) {
             serviceEntity.setAdmin_level( service.getAdmin_level().name() );
         }
-        serviceEntity.setSia_code( service.getSia_code() );
+        if ( service.getSia_code() != null ) {
+            serviceEntity.setSia_code( Integer.parseInt( service.getSia_code() ) );
+        }
         serviceEntity.setSia_update_date( service.getSia_update_date() );
         serviceEntity.setRelease_date( service.getRelease_date() );
         serviceEntity.setLast_modification_date( service.getLast_modification_date() );
@@ -57,9 +61,22 @@ public class ServiceMapperImpl implements ServiceMapper {
 
         Service service = new Service();
 
-        service.setCode( serviceEntity.getCode() );
+        service.setId( String.valueOf( serviceEntity.getId() ) );
         service.setName( serviceEntity.getName() );
         service.setSpecific_name( serviceEntity.getSpecific_name() );
+        service.setDepartment( serviceEntity.getDepartment() );
+        service.setResp_admin_uni( serviceEntity.getResp_admin_uni() );
+        service.setRoute( serviceEntity.getRoute() );
+        service.setStart_of_procedure( serviceEntity.getStart_of_procedure() );
+        service.setAmbit( serviceEntity.getAmbit() );
+        service.setAdmin_level( serviceEntity.getAdmin_level() );
+        service.setSia_code( String.valueOf( serviceEntity.getSia_code() ) );
+        service.setSia_update_date( serviceEntity.getSia_update_date() );
+        service.setRelease_date( serviceEntity.getRelease_date() );
+        service.setLast_modification_date( serviceEntity.getLast_modification_date() );
+        service.setStart_date( serviceEntity.getStart_date() );
+        service.setFinish_date( serviceEntity.getFinish_date() );
+        service.setRemarks( serviceEntity.getRemarks() );
 
         return service;
     }

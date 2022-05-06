@@ -28,7 +28,7 @@ public class Controller {
 	
 	@Transactional
 	public void deleteService(String actionId, Exchange exchange) {
-		serviceDaoImpl.delete("PROCEDURE", actionId, exchange);
+		serviceDaoImpl.delete("SERVICES", actionId, exchange);
 	}
 	
 	@Transactional
