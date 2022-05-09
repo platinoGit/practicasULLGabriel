@@ -18,6 +18,7 @@ public class GenericDaoImpl implements GenericDao {
 		super();
 		entityManager = Persistence.createEntityManagerFactory("entityManager").createEntityManager();
 	}
+	
 	@Override
 	public <T> boolean create(T object, Exchange exchange) {
 		try {

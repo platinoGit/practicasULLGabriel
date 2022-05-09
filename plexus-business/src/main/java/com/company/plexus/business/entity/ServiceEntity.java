@@ -16,11 +16,7 @@ import com.company.plexus.utils.ProcedureStart;
 
 @Entity
 @Table(name="SERVICES")
-public class ServiceEntity {
-	
-	/**
-	 * 
-	 */
+public class ServiceEntity implements Serializable {
 
 	@Id
 	@Column(name="ID")
@@ -36,7 +32,7 @@ public class ServiceEntity {
 	private String department;
 	
 	@Column(name="RESP_ADMIN_UNITY")
-	private String resp_admin_uni;
+	private String resp_admin_unity;
 	
 	@Column(name="ROUTE")
 	private String route;
@@ -160,7 +156,7 @@ public class ServiceEntity {
 	}
 
 	public String getResp_admin_uni() {
-		return resp_admin_uni;
+		return resp_admin_unity;
 	}
 
 	public String getRoute() {
@@ -224,7 +220,7 @@ public class ServiceEntity {
 	}
 
 	public void setResp_admin_uni(String resp_admin_uni) {
-		this.resp_admin_uni = resp_admin_uni;
+		this.resp_admin_unity = resp_admin_uni;
 	}
 
 	public void setRoute(String route) {
