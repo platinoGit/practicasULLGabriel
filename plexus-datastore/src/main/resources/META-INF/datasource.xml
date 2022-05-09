@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/osgi
+http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+    <!-- Conexión Oracle para BDPROC -->
+
+    <bean id="dataSourcePostgres" class="org.apache.commons.dbcp2.BasicDataSource">
+    	<property name="driverClassName" value="org.postgresql.Driver" />
+        <property name="url" value="jdbc:postgresql://localhost:5432/gobcan_actions" />
+        <property name="user" value="fuse" />
+        <property name="password" value="fuse" />
+        <property name="mindIdle" value="3" />
+        <property name="maxTotal" value="10" />
+        <property name="validationQuery" value="select schema_name, schema_owner from information_schema.schemate" />
+    </bean>
+
+    <osgi:service id="DataSourceService" ref="dataSourcePostgres"
+                  interface="javax.sql.DataSource">
+        <osgi:service-properties>
+            <entry key="osgi.jndi.service.name" value="jdbc/plexus" />
+        </osgi:service-properties>
+    </osgi:service>
+</beans>

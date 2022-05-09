@@ -18,6 +18,11 @@ import com.company.plexus.utils.ProcedureStart;
 @Table(name="SERVICES")
 public class ServiceEntity implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7707554062548579684L;
+
 	@Id
 	@Column(name="ID")
 	private int id;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="business.test.TestCreate" time="1.524" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="business.test.TestCreate" time="2.139" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/gabriel/workspace/plexus-project/plexus-business/target/surefire/surefirebooter16715114922614820613.jar /home/gabriel/workspace/plexus-project/plexus-business/target/surefire 2022-05-09T09-29-37_829-jvmRun1 surefire14742033886794634520tmp surefire_01264613200836335859tmp"/>
+    <property name="sun.java.command" value="/home/gabriel/workspace/plexus-project/plexus-business/target/surefire/surefirebooter2104343747851614191.jar /home/gabriel/workspace/plexus-project/plexus-business/target/surefire 2022-05-09T14-07-15_540-jvmRun1 surefire4962998637014713595tmp surefire_04011735841579719686tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/gabriel/workspace/plexus-project/plexus-business/target/test-classes:/home/gabriel/workspace/plexus-project/plexus-business/target/classes:/home/gabriel/.m2/repository/org/apache/camel/camel-core/3.15.0/camel-core-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-core-engine/3.15.0/camel-core-engine-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-api/3.15.0/camel-api-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-base-engine/3.15.0/camel-base-engine-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-base/3.15.0/camel-base-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-core-reifier/3.15.0/camel-core-reifier-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-core-processor/3.15.0/camel-core-processor-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-management-api/3.15.0/camel-management-api-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-util/3.15.0/camel-util-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-core-languages/3.15.0/camel-core-languages-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-core-model/3.15.0/camel-core-model-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-bean/3.15.0/camel-bean-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-browse/3.15.0/camel-browse-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-cluster/3.15.0/camel-cluster-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-controlbus/3.15.0/camel-controlbus-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-dataformat/3.15.0/camel-dataformat-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-dataset/3.15.0/camel-dataset-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-direct/3.15.0/camel-direct-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-directvm/3.15.0/camel-directvm-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-file/3.15.0/camel-file-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-health/3.15.0/camel-health-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-language/3.15.0/camel-language-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-log/3.15.0/camel-log-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-mock/3.15.0/camel-mock-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-ref/3.15.0/camel-ref-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-rest/3.15.0/camel-rest-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-tooling-model/3.15.0/camel-tooling-model-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-util-json/3.15.0/camel-util-json-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-saga/3.15.0/camel-saga-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-scheduler/3.15.0/camel-scheduler-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-seda/3.15.0/camel-seda-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-stub/3.15.0/camel-stub-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-timer/3.15.0/camel-timer-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-validator/3.15.0/camel-validator-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-vm/3.15.0/camel-vm-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-xpath/3.15.0/camel-xpath-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-xslt/3.15.0/camel-xslt-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-xml-jaxb/3.15.0/camel-xml-jaxb-3.15.0.jar:/home/gabriel/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/gabriel/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/gabriel/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar:/home/gabriel/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-xml-jaxp/3.15.0/camel-xml-jaxp-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-xml-io-util/3.15.0/camel-xml-io-util-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-test/3.15.0/camel-test-3.15.0.jar:/home/gabriel/.m2/repository/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.jar:/home/gabriel/.m2/repository/com/mycompany/plexus-interface/1.0.0-SNAPSHOT/plexus-interface-1.0.0-SNAPSHOT.jar:/home/gabriel/.m2/repository/javax/xml/ws/jaxws-api/2.3.1/jaxws-api-2.3.1.jar:/home/gabriel/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/gabriel/.m2/repository/javax/xml/soap/javax.xml.soap-api/1.4.0/javax.xml.soap-api-1.4.0.jar:/home/gabriel/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/gabriel/.m2/repository/com/sun/xml/ws/jaxws-rt/2.3.5/jaxws-rt-2.3.5.jar:/home/gabriel/.m2/repository/com/sun/xml/ws/policy/2.7.10/policy-2.7.10.jar:/home/gabriel/.m2/repository/org/glassfish/ha/ha-api/3.1.13/ha-api-3.1.13.jar:/home/gabriel/.m2/repository/org/glassfish/external/management-api/3.2.3/management-api-3.2.3.jar:/home/gabriel/.m2/repository/org/glassfish/gmbal/gmbal-api-only/4.0.3/gmbal-api-only-4.0.3.jar:/home/gabriel/.m2/repository/org/jvnet/staxex/stax-ex/1.8.3/stax-ex-1.8.3.jar:/home/gabriel/.m2/repository/com/sun/xml/stream/buffer/streambuffer/1.5.10/streambuffer-1.5.10.jar:/home/gabriel/.m2/repository/org/jvnet/mimepull/mimepull/1.9.15/mimepull-1.9.15.jar:/home/gabriel/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.18/FastInfoset-1.2.18.jar:/home/gabriel/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/gabriel/.m2/repository/com/sun/mail/jakarta.mail/1.6.7/jakarta.mail-1.6.7.jar:/home/gabriel/.m2/repository/com/sun/xml/messaging/saaj/saaj-impl/1.5.3/saaj-impl-1.5.3.jar:/home/gabriel/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.2.6/woodstox-core-6.2.6.jar:/home/gabriel/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/home/gabriel/.m2/repository/jakarta/xml/ws/jakarta.xml.ws-api/2.3.3/jakarta.xml.ws-api-2.3.3.jar:/home/gabriel/.m2/repository/jakarta/xml/soap/jakarta.xml.soap-api/1.4.2/jakarta.xml.soap-api-1.4.2.jar:/home/gabriel/.m2/repository/jakarta/jws/jakarta.jws-api/2.1.0/jakarta.jws-api-2.1.0.jar:/home/gabriel/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-jaxb/3.16.0/camel-jaxb-3.16.0.jar:/home/gabriel/.m2/repository/org/hibernate/hibernate-core/5.6.7.Final/hibernate-core-5.6.7.Final.jar:/home/gabriel/.m2/repository/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar:/home/gabriel/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/home/gabriel/.m2/repository/net/bytebuddy/byte-buddy/1.12.8/byte-buddy-1.12.8.jar:/home/gabriel/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/gabriel/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/home/gabriel/.m2/repository/org/jboss/jandex/2.4.2.Final/jandex-2.4.2.Final.jar:/home/gabriel/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/gabriel/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/gabriel/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/home/gabriel/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/home/gabriel/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/home/gabriel/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-cxf/3.15.0/camel-cxf-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-support/3.15.0/camel-support-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-attachments/3.15.0/camel-attachments-3.15.0.jar:/home/gabriel/.m2/repository/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-spring-xml/3.15.0/camel-spring-xml-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-spring/3.15.0/camel-spring-3.15.0.jar:/home/gabriel/.m2/repository/org/springframework/spring-tx/5.3.15/spring-tx-5.3.15.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-core-xml/3.15.0/camel-core-xml-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-cxf-transport/3.15.0/camel-cxf-transport-3.15.0.jar:/home/gabriel/.m2/repository/org/apache/camel/camel-http-base/3.15.0/camel-http-base-3.15.0.jar:/home/gabriel/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxrs/3.5.0/cxf-rt-frontend-jaxrs-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-core/3.5.0/cxf-core-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.3.0/xmlschema-core-2.3.0.jar:/home/gabriel/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-transports-http/3.5.0/cxf-rt-transports-http-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-security/3.5.0/cxf-rt-security-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxws/3.5.0/cxf-rt-frontend-jaxws-3.5.0.jar:/home/gabriel/.m2/repository/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar:/home/gabriel/.m2/repository/org/ow2/asm/asm/9.2/asm-9.2.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/3.5.0/cxf-rt-bindings-xml-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/3.5.0/cxf-rt-frontend-simple-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/3.5.0/cxf-rt-ws-addr-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-ws-policy/3.5.0/cxf-rt-ws-policy-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/neethi/neethi/3.2.0/neethi-3.2.0.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-rs-client/3.5.0/cxf-rt-rs-client-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-features-logging/3.5.0/cxf-rt-features-logging-3.5.0.jar:/home/gabriel/.m2/repository/org/springframework/spring-beans/5.3.15/spring-beans-5.3.15.jar:/home/gabriel/.m2/repository/org/springframework/spring-core/5.3.15/spring-core-5.3.15.jar:/home/gabriel/.m2/repository/org/springframework/spring-jcl/5.3.15/spring-jcl-5.3.15.jar:/home/gabriel/.m2/repository/org/springframework/spring-context/5.3.15/spring-context-5.3.15.jar:/home/gabriel/.m2/repository/org/springframework/spring-aop/5.3.15/spring-aop-5.3.15.jar:/home/gabriel/.m2/repository/org/springframework/spring-expression/5.3.15/spring-expression-5.3.15.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/3.5.0/cxf-rt-bindings-soap-3.5.0.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-wsdl/3.5.0/cxf-rt-wsdl-3.5.0.jar:/home/gabriel/.m2/repository/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3.jar:/home/gabriel/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/3.5.0/cxf-rt-databinding-jaxb-3.5.0.jar:/home/gabriel/.m2/repository/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar:/home/gabriel/.m2/repository/com/mycompany/plexus-datastore/1.0.0-SNAPSHOT/plexus-datastore-1.0.0-SNAPSHOT.jar:/home/gabriel/.m2/repository/org/postgresql/postgresql/42.3.0/postgresql-42.3.0.jar:/home/gabriel/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/home/gabriel/.m2/repository/org/qlrm/qlrm/3.0.4/qlrm-3.0.4.jar:/home/gabriel/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/gabriel/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar:/home/gabriel/.m2/repository/ch/qos/reload4j/reload4j/1.2.19/reload4j-1.2.19.jar:/home/gabriel/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home/gabriel/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/gabriel/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/gabriel/workspace/plexus-project/plexus-business/target/surefire/surefirebooter16715114922614820613.jar"/>
+    <property name="surefire.real.class.path" value="/home/gabriel/workspace/plexus-project/plexus-business/target/surefire/surefirebooter2104343747851614191.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.15+10-Ubuntu-0ubuntu0.20.04.1"/>
     <property name="user.name" value="gabriel"/>
@@ -57,5 +57,179 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testCreate" classname="business.test.TestCreate" time="1.48"/>
+  <testcase name="testCreate" classname="business.test.TestCreate" time="2.09">
+    <error message="Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]" type="org.hibernate.service.spi.ServiceException">org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at business.test.TestCreate.testCreate(TestCreate.java:50)
+Caused by: org.hibernate.engine.jndi.JndiException: JNDI lookups for scheme 'osgi' are not allowed
+	at business.test.TestCreate.testCreate(TestCreate.java:50)
+</error>
+    <system-out><![CDATA[0    [main] DEBUG org.jboss.logging  - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+202  [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider  - Located and parsed 1 persistence units; checking each
+203  [main] DEBUG org.hibernate.jpa.HibernatePersistenceProvider  - Checking persistence-unit [name=entityManager, explicit-provider=org.hibernate.ejb.HibernatePersistence] against incoming persistence unit name [entityManager]
+204  [main] DEBUG org.hibernate.jpa.boot.spi.ProviderChecker  - Persistence-unit [entityManager] requested PersistenceProvider [org.hibernate.ejb.HibernatePersistence]
+204  [main] WARN  org.hibernate.jpa.boot.spi.ProviderChecker  - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; [org.hibernate.jpa.HibernatePersistenceProvider] will be used instead.
+212  [main] DEBUG org.hibernate.jpa.internal.util.LogHelper  - PersistenceUnitInfo [
+	name: entityManager
+	persistence provider classname: org.hibernate.ejb.HibernatePersistence
+	classloader: null
+	excludeUnlistedClasses: false
+	JTA datasource: null
+	Non JTA datasource: osgi:service/javax.sql.Datasource/(osgi.jndi.service.name=jdbc/plexus)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/home/gabriel/workspace/plexus-project/plexus-business/target/classes/
+	Shared Cache Mode: null
+	Validation Mode: null
+	Jar files URLs []
+	Managed classes names [
+		com.company.plexus.business.entity.ServiceEntity]
+	Mapping files names []
+	Properties [
+		hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+		hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+		hibernate.cache.use_second_level_cache: false
+		hibernate.cache.use_query_cache: false
+		hibernate.hbm2ddl.auto: validate]
+221  [main] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl  - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+224  [main] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl  - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+236  [main] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl  - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+300  [main] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.7.Final
+301  [main] DEBUG org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+1156 [main] DEBUG org.hibernate.service.spi.ServiceBinding  - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+1169 [main] DEBUG org.hibernate.cache.internal.RegionFactoryInitiator  - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+1188 [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+1258 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration boolean -> org.hibernate.type.BooleanType@76f4b65
+1259 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration boolean -> org.hibernate.type.BooleanType@76f4b65
+1259 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@76f4b65
+1259 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@7f0d96f2
+1260 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration true_false -> org.hibernate.type.TrueFalseType@41e68d87
+1260 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration yes_no -> org.hibernate.type.YesNoType@77102b91
+1261 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration byte -> org.hibernate.type.ByteType@2bd08376
+1261 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration byte -> org.hibernate.type.ByteType@2bd08376
+1261 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@2bd08376
+1262 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration character -> org.hibernate.type.CharacterType@49964d75
+1262 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration char -> org.hibernate.type.CharacterType@49964d75
+1262 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@49964d75
+1263 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration short -> org.hibernate.type.ShortType@2b76ff4e
+1263 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration short -> org.hibernate.type.ShortType@2b76ff4e
+1264 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2b76ff4e
+1264 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration integer -> org.hibernate.type.IntegerType@1b84f475
+1265 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration int -> org.hibernate.type.IntegerType@1b84f475
+1265 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@1b84f475
+1266 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration long -> org.hibernate.type.LongType@4331d187
+1266 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration long -> org.hibernate.type.LongType@4331d187
+1266 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Long -> org.hibernate.type.LongType@4331d187
+1267 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration float -> org.hibernate.type.FloatType@5812f68b
+1267 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration float -> org.hibernate.type.FloatType@5812f68b
+1267 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@5812f68b
+1268 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration double -> org.hibernate.type.DoubleType@2f16c6b3
+1268 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration double -> org.hibernate.type.DoubleType@2f16c6b3
+1268 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2f16c6b3
+1268 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@21fd5faa
+1269 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@21fd5faa
+1269 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@27d4a09
+1269 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@27d4a09
+1270 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration string -> org.hibernate.type.StringType@676cf48
+1270 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.String -> org.hibernate.type.StringType@676cf48
+1271 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@32a68f4f
+1271 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@3a4621bd
+1272 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration url -> org.hibernate.type.UrlType@40db2a24
+1272 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.net.URL -> org.hibernate.type.UrlType@40db2a24
+1272 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration Duration -> org.hibernate.type.DurationType@2631f68c
+1272 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@2631f68c
+1277 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration Instant -> org.hibernate.type.InstantType@a87f8ec
+1277 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@a87f8ec
+1278 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@386f0da3
+1279 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@386f0da3
+1280 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@344f4dea
+1280 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@344f4dea
+1281 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@53fd0d10
+1281 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@53fd0d10
+1283 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@71812481
+1283 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@71812481
+1285 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@561868a0
+1285 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@561868a0
+1287 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@42bc14c1
+1287 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@42bc14c1
+1289 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration date -> org.hibernate.type.DateType@7776ab
+1289 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.sql.Date -> org.hibernate.type.DateType@7776ab
+1290 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration time -> org.hibernate.type.TimeType@3a0baae5
+1290 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@3a0baae5
+1292 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration timestamp -> org.hibernate.type.TimestampType@6995bf68
+1292 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@6995bf68
+1292 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@6995bf68
+1293 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@71c27ee8
+1294 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration calendar -> org.hibernate.type.CalendarType@6fb365ed
+1294 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@6fb365ed
+1294 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@6fb365ed
+1294 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@46dffdc3
+1295 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@4748a0f9
+1296 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration locale -> org.hibernate.type.LocaleType@176b3f44
+1296 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@176b3f44
+1297 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration currency -> org.hibernate.type.CurrencyType@31bcf236
+1297 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@31bcf236
+1297 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration timezone -> org.hibernate.type.TimeZoneType@22d7b4f8
+1297 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@22d7b4f8
+1298 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration class -> org.hibernate.type.ClassType@4f1bfe23
+1298 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@4f1bfe23
+1299 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@3f270e0a
+1299 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@3f270e0a
+1300 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@77258e59
+1300 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration binary -> org.hibernate.type.BinaryType@8dbfffb
+1300 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration byte[] -> org.hibernate.type.BinaryType@8dbfffb
+1301 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration [B -> org.hibernate.type.BinaryType@8dbfffb
+1301 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@324a0017
+1301 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@324a0017
+1302 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@324a0017
+1302 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration row_version -> org.hibernate.type.RowVersionType@22bac7bc
+1302 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration image -> org.hibernate.type.ImageType@5674e1f2
+1303 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration characters -> org.hibernate.type.CharArrayType@2dc995f4
+1303 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration char[] -> org.hibernate.type.CharArrayType@2dc995f4
+1303 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration [C -> org.hibernate.type.CharArrayType@2dc995f4
+1304 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@4ff4357f
+1304 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@4ff4357f
+1304 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@4ff4357f
+1305 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration text -> org.hibernate.type.TextType@45fd9a4d
+1305 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration ntext -> org.hibernate.type.NTextType@76884e4b
+1306 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration blob -> org.hibernate.type.BlobType@74eb909f
+1306 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@74eb909f
+1306 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@5629510
+1307 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration clob -> org.hibernate.type.ClobType@687ef2e0
+1308 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@687ef2e0
+1308 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration nclob -> org.hibernate.type.NClobType@6127a7e
+1309 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6127a7e
+1311 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@635572a7
+1312 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@7a1a3478
+1317 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration serializable -> org.hibernate.type.SerializableType@2a76840c
+1320 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration object -> org.hibernate.type.ObjectType@5d5f10b2
+1321 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5d5f10b2
+1321 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7642df8f
+1321 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@3e30646a
+1321 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5cde6747
+1321 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@63a270c9
+1321 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@37c7595
+1321 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@3ed242a4
+1322 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1199fe66
+1322 [main] DEBUG org.hibernate.type.BasicTypeRegistry  - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@614df0a4
+1335 [main] DEBUG org.hibernate.boot.internal.BootstrapContextImpl  - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@4372b9b6] into BootstrapContext; was [null]
+1335 [main] DEBUG org.hibernate.boot.internal.BootstrapContextImpl  - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@232a7d73] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@4b41e4dd]
+1390 [main] DEBUG org.hibernate.boot.internal.BootstrapContextImpl  - Injecting JPA temp ClassLoader [null] into BootstrapContext; was [null]
+1390 [main] DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl  - ClassLoaderAccessImpl#injectTempClassLoader(null) [was null]
+1406 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+1407 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+1407 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+1407 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+1408 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+1409 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+1409 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+1410 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+1412 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+1413 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+1413 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+1413 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+1413 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+1414 [main] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory  - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+1452 [main] DEBUG org.hibernate.service.spi.ServiceBinding  - Overriding existing service binding [org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+All test run succesfully
+]]></system-out>
+  </testcase>
 </testsuite>
