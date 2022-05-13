@@ -20,10 +20,19 @@ http://www.springframework.org/schema/osgi/spring-osgi.xsd">
         <property name="validationQuery" value="select schema_name, schema_owner from information_schema.schemate" />
     </bean>
 
-    <osgi:service id="DataSourceService" ref="dataSourcePostgres"
+	<bean id="postgresPoolDataSource" class="com.mchange.v2.c3p0.DataSources" factory-method="pooledDataSource">
+        <constructor-arg ref="dataSourcePostgres" />
+        <constructor-arg>
+            <map>
+                <entry key="maxConnectionAge" value="0" />
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <osgi:service id="DataSourceService" ref="postgresPoolDataSource"
                   interface="javax.sql.DataSource">
         <osgi:service-properties>
-            <entry key="osgi.jndi.service.name" value="jdbc/plexus" />
+            <entry key="osgi.jndi.service.name" value="jdbc/practicas" />
         </osgi:service-properties>
     </osgi:service>
 </beans>

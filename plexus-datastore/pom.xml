@@ -6,9 +6,9 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
   <artifactId>plexus-datastore</artifactId>
-  
+  <name>DataSource-bundle</name>
   <dependencies>
-  <!-- FALTA PONER DEPENDENCIA DE POSTGRES-->
+ 
   	<dependency>
   		<groupId>org.hibernate</groupId>
   		<artifactId>hibernate-core</artifactId>

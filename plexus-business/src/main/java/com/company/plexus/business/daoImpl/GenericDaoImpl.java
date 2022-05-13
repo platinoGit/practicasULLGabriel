@@ -16,7 +16,7 @@ public class GenericDaoImpl implements GenericDao {
 	
 	public GenericDaoImpl() {
 		super();
-		entityManager = Persistence.createEntityManagerFactory("entityManager").createEntityManager();
+		entityManager = Persistence.createEntityManagerFactory("dataSourceManager").createEntityManager();
 	}
 	
 	@Override

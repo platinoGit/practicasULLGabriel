@@ -20,19 +20,72 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <jboss.fuse.bom.version>7.10.0.fuse-sb2-7_10_1-00008-redhat-00001</jboss.fuse.bom.version>
+    
+    <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+    <Bundle-Name>${project.name}</Bundle-Name>
+    <Bundle-Version>${project.version}</Bundle-Version>
+    <meta.persistence>META-INF/persistence.xml</meta.persistence>
+    <osgi.require.bundle>org.apache.cxf.cxf-core</osgi.require.bundle>
+
+
+    <project.activator>es.gobcan.platino.servicios.lema.business.activation.Activator</project.activator>
+    <osgi.import.package>
+      javax.persistence,
+      javax.persistence.criteria,
+      javax.persistence.spi,
+      javax.persistence.metamodel,
+      org.springframework.aop,
+      org.springframework.aop.framework,
+      org.springframework.cglib.proxy,
+      org.springframework.cglib.core,
+      org.springframework.transaction.annotation,
+      org.hibernate.cache.ehcache,
+      org.aopalliance.aop,
+      org.springframework.cglib.reflect,
+      javax.sql,
+      org.hibernate,
+      org.hibernate.proxy,
+      javassist.util.proxy,
+      org.hibernate.ejb,
+      oracle.jdbc.driver,
+      org.springframework.orm.jpa,
+      org.springframework.orm.jpa.support,
+      oracle.jdbc.pool,
+      *
+    </osgi.import.package>
+
+
   </properties>
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.jboss.redhat-fuse</groupId>
         <artifactId>fuse-karaf-bom</artifactId>
-        <version>${jboss.fuse.bom.version}</version>
-        <type>bundle</type>
+        <version>7.10.0.fuse-sb2-7_10_0-00014-redhat-00001</version>
+        <type>pom</type>
         <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-osgi</artifactId>
+      <version>5.6.8.Final</version>
+    </dependency>
+    
+     <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-spring</artifactId>
+      <scope>provided</scope>
+      <version>3.14.3</version>
+    </dependency>
+    
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-core</artifactId>
