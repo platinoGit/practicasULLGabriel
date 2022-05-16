@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-05-10T12:55:01+0100",
+    date = "2022-05-16T14:07:21+0100",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.15 (Private Build)"
 )
 public class ServiceMapperImpl implements ServiceMapper {
@@ -19,27 +19,16 @@ public class ServiceMapperImpl implements ServiceMapper {
 
         ServiceEntity serviceEntity = new ServiceEntity();
 
-        if ( service.getId() != null ) {
-            serviceEntity.setId( Integer.parseInt( service.getId() ) );
-        }
+        serviceEntity.setAction_type( service.getAction_type() );
+        serviceEntity.setId( service.getId() );
         serviceEntity.setName( service.getName() );
         serviceEntity.setSpecific_name( service.getSpecific_name() );
-        if ( service.getDepartment() != null ) {
-            serviceEntity.setDepartment( service.getDepartment().name() );
-        }
-        if ( service.getResp_admin_uni() != null ) {
-            serviceEntity.setResp_admin_uni( service.getResp_admin_uni().name() );
-        }
+        serviceEntity.setDepartment( service.getDepartment() );
+        serviceEntity.setResp_admin_uni( service.getResp_admin_uni() );
         serviceEntity.setRoute( service.getRoute() );
-        if ( service.getStart_of_procedure() != null ) {
-            serviceEntity.setStart_of_procedure( service.getStart_of_procedure().name() );
-        }
-        if ( service.getAmbit() != null ) {
-            serviceEntity.setAmbit( service.getAmbit().name() );
-        }
-        if ( service.getAdmin_level() != null ) {
-            serviceEntity.setAdmin_level( service.getAdmin_level().name() );
-        }
+        serviceEntity.setStart_of_procedure( service.getStart_of_procedure() );
+        serviceEntity.setAmbit( service.getAmbit() );
+        serviceEntity.setAdmin_level( service.getAdmin_level() );
         if ( service.getSia_code() != null ) {
             serviceEntity.setSia_code( Integer.parseInt( service.getSia_code() ) );
         }
@@ -61,15 +50,16 @@ public class ServiceMapperImpl implements ServiceMapper {
 
         Service service = new Service();
 
-        service.setId( String.valueOf( serviceEntity.getId() ) );
+        service.setId( serviceEntity.getId() );
         service.setName( serviceEntity.getName() );
+        service.setAction_type( serviceEntity.getAction_type() );
         service.setSpecific_name( serviceEntity.getSpecific_name() );
         service.setDepartment( serviceEntity.getDepartment() );
         service.setResp_admin_uni( serviceEntity.getResp_admin_uni() );
-        service.setRoute( serviceEntity.getRoute() );
         service.setStart_of_procedure( serviceEntity.getStart_of_procedure() );
         service.setAmbit( serviceEntity.getAmbit() );
         service.setAdmin_level( serviceEntity.getAdmin_level() );
+        service.setRoute( serviceEntity.getRoute() );
         service.setSia_code( String.valueOf( serviceEntity.getSia_code() ) );
         service.setSia_update_date( serviceEntity.getSia_update_date() );
         service.setRelease_date( serviceEntity.getRelease_date() );

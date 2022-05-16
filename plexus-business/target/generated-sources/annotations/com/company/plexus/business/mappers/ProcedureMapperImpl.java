@@ -1,12 +1,18 @@
 package com.company.plexus.business.mappers;
 
 import com.company.plexus.business.entity.ProcedureEntity;
+import com.company.plexus.utils.AdminLevel;
+import com.company.plexus.utils.AdminUnity;
+import com.company.plexus.utils.Ambit;
+import com.company.plexus.utils.Department;
 import com.company.plexus.utils.Procedure;
+import com.company.plexus.utils.ProcedureStart;
+import com.company.plexus.utils.ProcedureType;
 import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-05-10T12:55:01+0100",
+    date = "2022-05-16T14:07:20+0100",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.15 (Private Build)"
 )
 public class ProcedureMapperImpl implements ProcedureMapper {
@@ -37,9 +43,7 @@ public class ProcedureMapperImpl implements ProcedureMapper {
         if ( procedure.getProcedure_type() != null ) {
             procedureEntity.setProcedure_type( procedure.getProcedure_type().name() );
         }
-        if ( procedure.getId() != null ) {
-            procedureEntity.setId( Integer.parseInt( procedure.getId() ) );
-        }
+        procedureEntity.setId( procedure.getId() );
         procedureEntity.setName( procedure.getName() );
         procedureEntity.setSpecific_name( procedure.getSpecific_name() );
         procedureEntity.setRoute( procedure.getRoute() );
@@ -63,15 +67,25 @@ public class ProcedureMapperImpl implements ProcedureMapper {
 
         Procedure procedure = new Procedure();
 
-        procedure.setId( String.valueOf( procedureEntity.getId() ) );
+        procedure.setId( procedureEntity.getId() );
         procedure.setName( procedureEntity.getName() );
         procedure.setSpecific_name( procedureEntity.getSpecific_name() );
-        procedure.setDepartment( procedureEntity.getDepartment() );
-        procedure.setResp_admin_uni( procedureEntity.getResp_admin_uni() );
+        if ( procedureEntity.getDepartment() != null ) {
+            procedure.setDepartment( Enum.valueOf( Department.class, procedureEntity.getDepartment() ) );
+        }
+        if ( procedureEntity.getResp_admin_uni() != null ) {
+            procedure.setResp_admin_uni( Enum.valueOf( AdminUnity.class, procedureEntity.getResp_admin_uni() ) );
+        }
+        if ( procedureEntity.getStart_of_procedure() != null ) {
+            procedure.setStart_of_procedure( Enum.valueOf( ProcedureStart.class, procedureEntity.getStart_of_procedure() ) );
+        }
+        if ( procedureEntity.getAmbit() != null ) {
+            procedure.setAmbit( Enum.valueOf( Ambit.class, procedureEntity.getAmbit() ) );
+        }
+        if ( procedureEntity.getAdmin_level() != null ) {
+            procedure.setAdmin_level( Enum.valueOf( AdminLevel.class, procedureEntity.getAdmin_level() ) );
+        }
         procedure.setRoute( procedureEntity.getRoute() );
-        procedure.setStart_of_procedure( procedureEntity.getStart_of_procedure() );
-        procedure.setAmbit( procedureEntity.getAmbit() );
-        procedure.setAdmin_level( procedureEntity.getAdmin_level() );
         procedure.setSia_code( procedureEntity.getSia_code() );
         procedure.setSia_update_date( procedureEntity.getSia_update_date() );
         procedure.setRelease_date( procedureEntity.getRelease_date() );
@@ -80,7 +94,9 @@ public class ProcedureMapperImpl implements ProcedureMapper {
         procedure.setFinish_date( procedureEntity.getFinish_date() );
         procedure.setRemarks( procedureEntity.getRemarks() );
         procedure.setFamily( procedureEntity.getFamily() );
-        procedure.setProcedure_type( procedureEntity.getProcedure_type() );
+        if ( procedureEntity.getProcedure_type() != null ) {
+            procedure.setProcedure_type( Enum.valueOf( ProcedureType.class, procedureEntity.getProcedure_type() ) );
+        }
 
         return procedure;
     }

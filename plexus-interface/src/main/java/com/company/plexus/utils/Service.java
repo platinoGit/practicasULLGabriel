@@ -9,13 +9,13 @@ import javax.persistence.Id;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {
 		"id",
-		"code",
 		"name",
 		"specific_name",
 		"department",
 		"resp_admin_uni",
 		"route",
 		"start_of_procedure",
+		"action_type",
 		"ambit",
 		"admin_level",
 		"sia_code",
@@ -30,14 +30,15 @@ import javax.persistence.Id;
 @Entity
 @Table(name="SERVICE")
 public class Service {
-	protected String id;
-	protected int code;
+	protected int id;
+	//protected int code;
 	protected String name;
 	protected String specific_name;
 	protected Department department;
 	protected AdminUnity resp_admin_uni;
 	protected String route;
 	protected ProcedureStart start_of_procedure;
+	private String action_type;
 	protected Ambit ambit;
 	protected AdminLevel admin_level;
 	protected String sia_code;
@@ -49,12 +50,12 @@ public class Service {
 	protected String remarks;
 	
 	@Id
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public int getCode() {
-		return code;
-	}
+//	public int getCode() {
+//		return code;
+//	}
 	public String getName() {
 		return name;
 	}
@@ -69,6 +70,9 @@ public class Service {
 	}
 	public String getRoute() {
 		return route;
+	}
+	public String getAction_type() {
+		return action_type;
 	}
 	public ProcedureStart getStart_of_procedure() {
 		return start_of_procedure;
@@ -100,14 +104,17 @@ public class Service {
 	public String getRemarks() {
 		return remarks;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
-	public void setCode(int code) {
-		this.code = code;
-	}
+//	public void setCode(int code) {
+//		this.code = code;
+//	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public void setAction_type(String action_type) {
+		this.action_type = action_type;
 	}
 	public void setSpecific_name(String specific_name) {
 		this.specific_name = specific_name;

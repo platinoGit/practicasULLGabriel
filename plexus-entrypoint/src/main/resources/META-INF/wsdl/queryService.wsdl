@@ -97,14 +97,14 @@
 
   <xs:complexType name="service">
     <xs:sequence>
-      <xs:element minOccurs="0" name="id" type="xs:string"/>
-      <xs:element name="code" type="xs:int"/>
+      <xs:element name="id" type="xs:int"/>
       <xs:element minOccurs="0" name="name" type="xs:string"/>
       <xs:element minOccurs="0" name="specific_name" type="xs:string"/>
       <xs:element minOccurs="0" name="department" type="tns:department"/>
       <xs:element minOccurs="0" name="resp_admin_uni" type="tns:adminUnity"/>
       <xs:element minOccurs="0" name="route" type="xs:string"/>
       <xs:element minOccurs="0" name="start_of_procedure" type="tns:procedureStart"/>
+      <xs:element minOccurs="0" name="action_type" type="xs:string"/>
       <xs:element minOccurs="0" name="ambit" type="tns:ambit"/>
       <xs:element minOccurs="0" name="admin_level" type="tns:adminLevel"/>
       <xs:element minOccurs="0" name="sia_code" type="xs:string"/>

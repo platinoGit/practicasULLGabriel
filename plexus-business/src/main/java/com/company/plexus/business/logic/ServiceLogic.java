@@ -40,7 +40,7 @@ public class ServiceLogic {
 		getController().updateService(newService, exchange);
 	}
 	
-	public void deleteService(String procedureId, Exchange exchange) {
+	public void deleteService(int procedureId, Exchange exchange) {
 		getController().deleteService(procedureId, exchange);
 	}
 	

@@ -1,12 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: business.test.TestCreate
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.266 s <<< FAILURE! - in business.test.TestCreate
-testCreate(business.test.TestCreate)  Time elapsed: 1.2 s  <<< ERROR!
-org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-	at business.test.TestCreate.testCreate(TestCreate.java:50)
-Caused by: org.hibernate.engine.jndi.JndiException: Error parsing JNDI name [osgi:service/javax.sql.DataSource/(osgi.jndi.service.name=jdbc/practicas)]
-	at business.test.TestCreate.testCreate(TestCreate.java:50)
-Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or in an application resource file: java.naming.factory.initial
-	at business.test.TestCreate.testCreate(TestCreate.java:50)
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.388 s <<< FAILURE! - in business.test.TestCreate
+testControllerCreate(business.test.TestCreate)  Time elapsed: 1.264 s  <<< FAILURE!
+java.lang.AssertionError: expected:<com.company.plexus.business.entity.ServiceEntity@3e9> but was:<com.company.plexus.business.entity.ServiceEntity@0>
+	at business.test.TestCreate.testControllerCreate(TestCreate.java:113)
 

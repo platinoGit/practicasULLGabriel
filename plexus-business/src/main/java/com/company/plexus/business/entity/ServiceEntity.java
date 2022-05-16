@@ -34,10 +34,10 @@ public class ServiceEntity implements Serializable {
 	private String specific_name;
 	
 	@Column(name="DEPARTMENT")
-	private String department;
+	private Department department;
 	
 	@Column(name="RESP_ADMIN_UNITY")
-	private String resp_admin_unity;
+	private AdminUnity resp_admin_unity;
 	
 	@Column(name="ROUTE")
 	private String route;
@@ -46,13 +46,13 @@ public class ServiceEntity implements Serializable {
 	private String action_type;
 	
 	@Column(name="START_OF_PROCEDURE")
-	private String start_of_procedure;
+	private ProcedureStart start_of_procedure;
 	
 	@Column(name="AMBIT")
-	private String ambit;
+	private Ambit ambit;
 	
 	@Column(name="ADMIN_LEVEL")
-	private String admin_level;
+	private AdminLevel admin_level;
 	
 	@Column(name="SIA_CODE")
 	private int sia_code;
@@ -156,11 +156,11 @@ public class ServiceEntity implements Serializable {
 		this.action_type = action_type;
 	}
 
-	public String getDepartment() {
+	public Department getDepartment() {
 		return department;
 	}
 
-	public String getResp_admin_uni() {
+	public AdminUnity getResp_admin_uni() {
 		return resp_admin_unity;
 	}
 
@@ -168,15 +168,15 @@ public class ServiceEntity implements Serializable {
 		return route;
 	}
 
-	public String getStart_of_procedure() {
+	public ProcedureStart getStart_of_procedure() {
 		return start_of_procedure;
 	}
 
-	public String getAmbit() {
+	public Ambit getAmbit() {
 		return ambit;
 	}
 
-	public String getAdmin_level() {
+	public AdminLevel getAdmin_level() {
 		return admin_level;
 	}
 
@@ -220,11 +220,11 @@ public class ServiceEntity implements Serializable {
 		this.specific_name = specific_name;
 	}
 
-	public void setDepartment(String department) {
+	public void setDepartment(Department department) {
 		this.department = department;
 	}
 
-	public void setResp_admin_uni(String resp_admin_uni) {
+	public void setResp_admin_uni(AdminUnity resp_admin_uni) {
 		this.resp_admin_unity = resp_admin_uni;
 	}
 
@@ -232,15 +232,15 @@ public class ServiceEntity implements Serializable {
 		this.route = route;
 	}
 
-	public void setStart_of_procedure(String start_of_procedure) {
+	public void setStart_of_procedure(ProcedureStart start_of_procedure) {
 		this.start_of_procedure = start_of_procedure;
 	}
 
-	public void setAmbit(String ambit) {
+	public void setAmbit(Ambit ambit) {
 		this.ambit = ambit;
 	}
 
-	public void setAdmin_level(String admin_level) {
+	public void setAdmin_level(AdminLevel admin_level) {
 		this.admin_level = admin_level;
 	}
 

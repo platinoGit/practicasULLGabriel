@@ -44,7 +44,7 @@ public class GenericDaoImpl implements GenericDao {
 	}
 	
 	@Override
-	public <T> boolean delete(String table, String id, Exchange exchange) {
+	public <T> boolean delete(String table, int id, Exchange exchange) {
 		try {
 			javax.persistence.Query q = entityManager.createQuery("Delete from " + table + " where CODE = :id");
 			q.setParameter("id", id);
