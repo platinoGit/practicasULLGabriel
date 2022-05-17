@@ -37,16 +37,17 @@ public class ServiceEntity implements Serializable {
 	private Department department;
 	
 	@Column(name="RESP_ADMIN_UNITY")
-	private AdminUnity resp_admin_unity;
+	private AdminUnity resp_admin_uni;
 	
 	@Column(name="ROUTE")
 	private String route;
 	
+	@Column(name="START_OF_PROCEDURE")
+	private ProcedureStart start_of_procedure;
+
 	@Column(name="ACTION_TYPE")
 	private String action_type;
 	
-	@Column(name="START_OF_PROCEDURE")
-	private ProcedureStart start_of_procedure;
 	
 	@Column(name="AMBIT")
 	private Ambit ambit;
@@ -55,7 +56,7 @@ public class ServiceEntity implements Serializable {
 	private AdminLevel admin_level;
 	
 	@Column(name="SIA_CODE")
-	private int sia_code;
+	private String sia_code;
 	
 	@Column(name="SIA_UPDATE_DATE")
 	private String sia_update_date;
@@ -161,7 +162,7 @@ public class ServiceEntity implements Serializable {
 	}
 
 	public AdminUnity getResp_admin_uni() {
-		return resp_admin_unity;
+		return resp_admin_uni;
 	}
 
 	public String getRoute() {
@@ -180,7 +181,7 @@ public class ServiceEntity implements Serializable {
 		return admin_level;
 	}
 
-	public int getSia_code() {
+	public String getSia_code() {
 		return sia_code;
 	}
 
@@ -225,7 +226,7 @@ public class ServiceEntity implements Serializable {
 	}
 
 	public void setResp_admin_uni(AdminUnity resp_admin_uni) {
-		this.resp_admin_unity = resp_admin_uni;
+		this.resp_admin_uni = resp_admin_uni;
 	}
 
 	public void setRoute(String route) {
@@ -244,7 +245,7 @@ public class ServiceEntity implements Serializable {
 		this.admin_level = admin_level;
 	}
 
-	public void setSia_code(int sia_code) {
+	public void setSia_code(String sia_code) {
 		this.sia_code = sia_code;
 	}
 

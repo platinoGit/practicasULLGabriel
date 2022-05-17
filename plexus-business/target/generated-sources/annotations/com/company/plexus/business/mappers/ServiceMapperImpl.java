@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-05-16T14:07:21+0100",
+    date = "2022-05-17T13:24:51+0100",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.15 (Private Build)"
 )
 public class ServiceMapperImpl implements ServiceMapper {
@@ -29,9 +29,7 @@ public class ServiceMapperImpl implements ServiceMapper {
         serviceEntity.setStart_of_procedure( service.getStart_of_procedure() );
         serviceEntity.setAmbit( service.getAmbit() );
         serviceEntity.setAdmin_level( service.getAdmin_level() );
-        if ( service.getSia_code() != null ) {
-            serviceEntity.setSia_code( Integer.parseInt( service.getSia_code() ) );
-        }
+        serviceEntity.setSia_code( service.getSia_code() );
         serviceEntity.setSia_update_date( service.getSia_update_date() );
         serviceEntity.setRelease_date( service.getRelease_date() );
         serviceEntity.setLast_modification_date( service.getLast_modification_date() );
@@ -60,7 +58,7 @@ public class ServiceMapperImpl implements ServiceMapper {
         service.setAmbit( serviceEntity.getAmbit() );
         service.setAdmin_level( serviceEntity.getAdmin_level() );
         service.setRoute( serviceEntity.getRoute() );
-        service.setSia_code( String.valueOf( serviceEntity.getSia_code() ) );
+        service.setSia_code( serviceEntity.getSia_code() );
         service.setSia_update_date( serviceEntity.getSia_update_date() );
         service.setRelease_date( serviceEntity.getRelease_date() );
         service.setLast_modification_date( serviceEntity.getLast_modification_date() );

@@ -53,7 +53,7 @@ public class TestCreate {
 		entity.setAmbit(Ambit.ESPECIFICO);
 		//entity.setAdmin_level("Nivel 4: Tramitación electrónica completa");
 		entity.setAdmin_level(AdminLevel.NIVEL_4);
-		entity.setSia_code(220851);
+		entity.setSia_code("220851");
 		entity.setSia_update_date("2022-03-09 23:00:10.668");
 		entity.setRelease_date("2022-03-09 10:42:35.418");
 		entity.setLast_modification_date("09/03/2022 10:42");
@@ -86,30 +86,28 @@ public class TestCreate {
 	@Test
 	public void testControllerCreate() {
 		Service service = new Service();
-		entity.setId(1001);
-		entity.setName("Consulta Empresas Clasificadas");
-		entity.setSpecific_name("");
+		service.setId(1001);
+		service.setName("Consulta Empresas Clasificadas");
+		service.setSpecific_name("");
 		//entity.setDepartment("Dirección General de Patrimonio y Contratación");
-		entity.setDepartment(Department.ADMIN_PUBLIC);
+		service.setDepartment(Department.ADMIN_PUBLIC);
 		//entity.setResp_admin_uni("Consejería de Hacienda, Presupuestos y Asuntos Europeos");
-		entity.setResp_admin_uni(AdminUnity.CONSEJERIA_AGRICULTURA);
-		entity.setRoute("Gobierno de Canarias >> Consejería de Hacienda, Presupuestos y Asuntos Europeos >> Viceconsejería de Hacienda, Planificación y Asuntos Europeos >> Dirección General de Patrimonio y Contratación >> Junta Consultiva");
-		entity.setAction_type("SERVICIO");
+		service.setResp_admin_uni(AdminUnity.CONSEJERIA_AGRICULTURA);
+		service.setRoute("Gobierno de Canarias >> Consejería de Hacienda, Presupuestos y Asuntos Europeos >> Viceconsejería de Hacienda, Planificación y Asuntos Europeos >> Dirección General de Patrimonio y Contratación >> Junta Consultiva");
+		service.setAction_type("SERVICIO");
 		//entity.setStart_of_procedure("INTERESADO");
-		entity.setStart_of_procedure(ProcedureStart.INTERESADO);
+		service.setStart_of_procedure(ProcedureStart.INTERESADO);
 		//entity.setAmbit("ESPECIFICO");
-		entity.setAmbit(Ambit.ESPECIFICO);
+		service.setAmbit(Ambit.ESPECIFICO);
 		//entity.setAdmin_level("Nivel 4: Tramitación electrónica completa");
-		entity.setAdmin_level(AdminLevel.NIVEL_4);
-		entity.setSia_code(220851);
-		entity.setSia_update_date("2022-03-09 23:00:10.668");
-		entity.setRelease_date("2022-03-09 10:42:35.418");
-		entity.setLast_modification_date("09/03/2022 10:42");
-		entity.setStart_date("");
-		entity.setFinish_date("");
-		entity.setRemarks("");
-		System.out.println(entity.getId());
-		System.out.println(Mappers.getMapper(ServiceMapper.class).serviceToEntity(service).getId());
+		service.setAdmin_level(AdminLevel.NIVEL_4);
+		service.setSia_code("220851");
+		service.setSia_update_date("2022-03-09 23:00:10.668");
+		service.setRelease_date("2022-03-09 10:42:35.418");
+		service.setLast_modification_date("09/03/2022 10:42");
+		service.setStart_date("");
+		service.setFinish_date("");
+		service.setRemarks("");
 		assertEquals(entity, Mappers.getMapper(ServiceMapper.class).serviceToEntity(service));
 	}
 }
