@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1652790294952
+Bnd-LastModified: 1652966041241
 Build-Jdk: 11.0.15
 Built-By: gabriel
 Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.html
@@ -13,15 +13,15 @@ Export-Package: com.company.datastore.crud;uses:="com.company.plexus.bus
  xus.business.entity;uses:="com.company.plexus.utils,javax.persistence";
  version="1.0.0.SNAPSHOT",com.company.plexus.business.routing;uses:="org
  .apache.camel.builder";version="1.0.0.SNAPSHOT",com.company.plexus.busi
- ness.logic;uses:="com.company.plexus.utils,org.apache.camel,org.springf
- ramework.transaction.annotation";version="1.0.0.SNAPSHOT",com.company.p
- lexus.business.mappers;uses:="com.company.plexus.business.entity,com.co
- mpany.plexus.utils";version="1.0.0.SNAPSHOT",com.company.plexus.busines
- s.daoImpl;uses:="com.company.plexus.business.dao,com.company.plexus.bus
- iness.entity,org.apache.camel,org.springframework.transaction.annotatio
- n";version="1.0.0.SNAPSHOT",com.company.plexus.business.dao;uses:="com.
- company.plexus.business.entity,org.apache.camel";version="1.0.0.SNAPSHO
- T"
+ ness.logic;uses:="com.company.plexus.business.daoImpl,com.company.plexu
+ s.utils,org.apache.camel,org.springframework.transaction.annotation";ve
+ rsion="1.0.0.SNAPSHOT",com.company.plexus.business.mappers;uses:="com.c
+ ompany.plexus.business.entity,com.company.plexus.utils";version="1.0.0.
+ SNAPSHOT",com.company.plexus.business.daoImpl;uses:="com.company.plexus
+ .business.dao,com.company.plexus.business.entity,org.apache.camel,org.s
+ pringframework.transaction.annotation";version="1.0.0.SNAPSHOT",com.com
+ pany.plexus.business.dao;uses:="com.company.plexus.business.entity,org.
+ apache.camel";version="1.0.0.SNAPSHOT"
 Import-Package: com.company.plexus.business.dao,com.company.plexus.busin
  ess.daoImpl,com.company.plexus.business.entity,com.company.plexus.busin
  ess.mappers,com.company.plexus.utils,javax.persistence;version="[2.2,3)

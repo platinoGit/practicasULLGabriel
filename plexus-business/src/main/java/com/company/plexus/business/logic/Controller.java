@@ -12,31 +12,50 @@ import com.company.plexus.utils.*;
 import java.util.List;
 
 public class Controller {
-	ServiceDaoImpl serviceDaoImpl;
+	private ServiceDaoImpl serviceDaoImpl;
 	
 	@Transactional
-	public void createService(Service service, Exchange exchange) {
-		ServiceEntity pEntity = Mappers.getMapper(ServiceMapper.class).serviceToEntity(service);
-		serviceDaoImpl.create(pEntity, exchange);
+	public Boolean createService(Service service, Exchange exchange) {
+		try {
+			ServiceEntity pEntity = Mappers.getMapper(ServiceMapper.class).serviceToEntity(service);
+			serviceDaoImpl.create(pEntity, exchange);
+			return true;
+		} catch (Exception e) {
+			System.out.print(e);
+			return false;
+		}
 	}
 	
 	@Transactional
-	public void updateService(Service newService, Exchange exchange) {
-		ServiceEntity newServiceEntity = Mappers.getMapper(ServiceMapper.class).serviceToEntity(newService);
-		serviceDaoImpl.update(newServiceEntity, exchange);
+	public Boolean updateService(Service newService, Exchange exchange) {
+		try {
+			ServiceEntity newServiceEntity = Mappers.getMapper(ServiceMapper.class).serviceToEntity(newService);
+			serviceDaoImpl.update(newServiceEntity, exchange);			
+			return true;
+		} catch (Exception e) {
+			System.out.print(e);
+			return false;
+		}
 	}
 	
 	@Transactional
-	public void deleteService(int actionId, Exchange exchange) {
-		serviceDaoImpl.delete("SERVICES", actionId, exchange);
+	public Boolean deleteService(String table, int actionId, Exchange exchange) {
+		try {
+			serviceDaoImpl.delete("SERVICES", actionId, exchange);
+			return true;
+		} catch (Exception e) {
+			System.out.print(e);
+			return false;
+		}
 	}
 	
 	@Transactional
 	public Service[] selectServiceByAdminUnity(String admin_unity, Exchange exchange) {
-		List<ServiceEntity> list = serviceDaoImpl.selectByAdminLevel(admin_unity, exchange);
+		List<ServiceEntity> list = serviceDaoImpl.selectByAdminUnity(admin_unity, exchange);
 		Service[] serviceArray = new Service[list.size()];
 		for (int i = 0; i < list.size(); i++) {
 			serviceArray[i] = Mappers.getMapper(ServiceMapper.class).entityToService(list.get(i));
+			System.out.println(serviceArray[i].getId());
 		}
 		return serviceArray;
 	}
@@ -49,5 +68,9 @@ public class Controller {
 			serviceArray[i] = Mappers.getMapper(ServiceMapper.class).entityToService(list.get(i));
 		}
 		return serviceArray;
+	}
+	
+	public void setServiceDaoImpl(ServiceDaoImpl inputServiceDaoImpl) {
+		serviceDaoImpl = inputServiceDaoImpl;
 	}
 }

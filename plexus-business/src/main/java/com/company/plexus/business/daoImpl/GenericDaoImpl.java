@@ -27,7 +27,8 @@ public class GenericDaoImpl implements GenericDao {
 			entityManager.flush();
 			return true;
 		} catch (Exception e) {
-			throw e;
+			System.out.print(e);
+			return false;
 		}
 	}
 	
@@ -39,7 +40,8 @@ public class GenericDaoImpl implements GenericDao {
 			entityManager.flush();
 			return true;
 		} catch (Exception e) {
-			throw e;
+			System.out.print(e);
+			return false;
 		}
 	}
 	
@@ -51,7 +53,8 @@ public class GenericDaoImpl implements GenericDao {
 			entityManager.flush();
 			return true;
 		} catch (Exception e) {
-			throw e;
+			System.out.print(e);
+			return false;
 		}
 	}
 }

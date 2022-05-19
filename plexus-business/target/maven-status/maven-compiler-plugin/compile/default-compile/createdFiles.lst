@@ -1,6 +1,7 @@
 com/company/plexus/business/logic/ServiceLogic.class
 com/company/plexus/business/logic/Controller.class
 com/company/plexus/business/daoImpl/GenericDaoImpl.class
+com/company/plexus/business/logic/BusinessLogic.class
 com/company/plexus/business/mappers/ProcedureMapper.class
 com/company/plexus/business/dao/GenericDao.class
 com/company/plexus/business/dao/ServiceDao.class
